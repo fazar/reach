@@ -86,7 +86,6 @@
 
 		function display_image(){
 			if ( has_post_thumbnail() ) {
-				var_dump($this->size);
 				the_post_thumbnail($this->size);
 			} 
 		}

@@ -18,10 +18,10 @@
 			}
 
 			$col = array(
-				0 => 5,
-				1 => 7,
-				2 => 7,
-				3 => 5,				
+				0 => 4,
+				1 => 8,
+				2 => 8,
+				3 => 4,				
 			);
 			$i = 0;
 			$counter = 1;
@@ -33,8 +33,10 @@
 					echo '<div class="row">';
 				}
 
-				if( $counter == $post_count && $counter % 2 == 1) { ?>
-					<article class="large-12; ?> columns">
+				if( $counter == $post_count && $counter % 2 == 1) { 
+					$size = 'large';
+					?>
+					<article class="large-12 columns">
 				<?php }else { ?>
 					<article class="large-<?php echo $col[$i]; ?> columns">
 				<?php } ?>
@@ -59,7 +61,7 @@
 							<li><?php echo get_post_meta( get_the_id(), '_dc_post_views', true  ); ?> Views</li>
 						</ul>
 						<div class="the-content">
-						<?php the_content() ?>
+						<?php the_excerpt() ?>
 						</div>
 						<a class="read-more" href="<?php the_permalink() ?>">
 							Read More
