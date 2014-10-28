@@ -65,6 +65,7 @@
 		function load_parts(){
 			$this->load_part( array('header', 'main') );
 			$this->load_part( array('sidebar', 'hidden') );
+			$this->load_part( array('footer', 'main') );
 		}
 
 		function add_image_sizes(){

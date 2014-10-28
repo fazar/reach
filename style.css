@@ -52,10 +52,10 @@ ul {
 
 a {
 	color: #212121;
-	-webkit-transition: color 0.5s ease-in-out;
+	/*-webkit-transition: color 0.5s ease-in-out;
 	-moz-transition: color 0.5s ease-in-out;
 	-o-transition: color 0.5s ease-in-out;
-	transition: color 0.5s ease-in-out;
+	transition: color 0.5s ease-in-out;*/
 }
 
 a:hover {
@@ -86,8 +86,6 @@ a:hover {
 .post-meta {
 	margin-top: 20px;
 }
-
-
 
 .post-title {
 	font-family: 'Open Sans';
@@ -183,6 +181,43 @@ a:hover {
 	-o-transition : left 0.6s ease-in-out,right 0.6s ease-in-out;
 	-moz-transition : left 0.6s ease-in-out,right 0.6s ease-in-out;
 	-ms-transition : left 0.6s ease-in-out,right 0.6s ease-in-out;
+}
+
+
+.single-post-header h2,
+.single-post-header p {
+	text-align: center;
+}
+
+
+.main-container {
+	height: 100%;
+}
+
+.main-with-image {
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;	
+}
+
+.main-with-image > .row {	
+	height: 100%;
+	margin-top: -60px;
+	text-align: center;
+}
+
+.main-with-image > .row > .large-12.columns {
+	display: inline-block;
+	vertical-align: middle;
+	float: none;
+	width: 99%;
+}
+
+.main-with-image > .row:before {
+	content: "";
+	height: 100%;
+	vertical-align: middle;
+	display: inline-block;
 }
 
 .main-container{
@@ -1127,8 +1162,50 @@ table tfoot tr td {
 	width: 100%;
 }
 
-.posts-list .row {
+.posts-list > .row,
+.single-blogpost {
 	margin-top: 50px;
+}
+
+.pagination-wrapper{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.page-numbers{
+    font-size: 1.125rem;
+    margin:0 8px;
+    color:#bdbdbd;
+    padding: 0px 4px 0px;
+    line-height: 1;
+    font-family: 'Open Sans';
+    font-weight: 400;
+}
+.page-numbers.prev,
+.page-numbers.next{
+    vertical-align: middle;
+}
+
+.page-numbers:hover{
+    color:#212121;
+}
+.page-numbers.current{
+    background:#212121;
+    color:#fff;
+}
+.pagination-wrapper.in-masonry{
+    padding:0 15px;
+}
+.pagination-wrapper.archive{
+    padding:0 15px;
+}
+.pagination-wrapper .page-numbers:first-child{
+    margin-left: 0;
+}
+.copyright {
+	font-family: 'Roboto Slab';
+	font-weight: 400;
+	color: #bdbdbd;
+	font-size: 1.125rem;
 }
 
 .post-header .flex-video{
@@ -1290,3 +1367,19 @@ table tfoot tr td {
 .flexslider li{
 	margin:0;
 }
+.main-footer {
+	margin: 25px 0 100px;
+}
+.footer-social-media {
+	margin-top: 20px;
+}
+.footer-social-media li {
+	display: inline;
+	margin: 0 10px;
+}
+
+.main-footer .large-12 {
+	text-align: center;
+}
+
+

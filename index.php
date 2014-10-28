@@ -27,9 +27,8 @@
 			$counter = 1;
 			
 			while ( have_posts() ) : the_post(); 				
-				$size = 'dc-medium';
-				if($i % 2 == 0) {
-					$size = 'dc-small';
+				$size = $col[$i] == 4 ? 'dc-small' : 'dc-medium';
+				if($i % 2 == 0) {					
 					echo '<div class="row">';
 				}
 
