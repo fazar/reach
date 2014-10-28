@@ -51,21 +51,19 @@
 							}
 						?>
 					</div>
-					<div class="post-content">
-						<h2 class="post-title"><?php the_title() ?></h2>
-						<ul class="post-meta">
-							
-							<li><?php the_category(); ?></li>
-							<!-- <li><?php comments_number( 'no comments', 'one comment', '% comments' ); ?></li> -->
-							<li><?php the_time( get_option( 'date_format' ) ); ?> </li>
-							<li><?php echo get_post_meta( get_the_id(), '_dc_post_views', true  ); ?> Views</li>
+					<div class="post-content">						
+						<ul class="post-meta">				
+							<li><?php the_category(); ?></li>							
+							<li>• <?php the_time( get_option( 'date_format' ) ); ?> </li>
+							<li>• <?php echo get_post_meta( get_the_id(), '_dc_post_views', true  ); ?> Views</li>
 						</ul>
+						<h2 class="post-title">
+							<a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
+								<?php the_title(); ?></a>
+						</h2>
 						<div class="the-content">
 						<?php the_excerpt() ?>
 						</div>
-						<a class="read-more" href="<?php the_permalink() ?>">
-							Read More
-						</a>
 					</div>
 				</article>
 				<?php

@@ -53,11 +53,40 @@ ul > li {
     display: inline;
 }
 
-ul.post-categories {
-	margin: 0;
-	padding: 0;
-	display: inline-block;
+a {
+	color: #212121;
+	-webkit-transition: color 0.5s ease-in-out;
+	-moz-transition: color 0.5s ease-in-out;
+	-o-transition: color 0.5s ease-in-out;
+	transition: color 0.5s ease-in-out;
 }
+
+a:hover {
+	color: #000000;
+}
+
+.post-meta,
+.post-categories,
+.post-categories a {
+	font-size: 0.875rem;
+	line-height: 1;
+	padding: 0;
+	margin: 0 0 0 0;
+	color: #bdbdbd;
+	display: inline-block;
+	font-family: 'Open Sans';
+	font-weight: 400;
+}
+
+.post-categories a:hover {
+	color: #212121;
+}
+
+.post-meta {
+	margin-top: 20px;
+}
+
+
 
 .post-title {
 	font-family: 'Open Sans';
@@ -276,3 +305,4 @@ ul.post-categories {
 .posts-list .row {
 	margin-top: 50px;
 }
+
