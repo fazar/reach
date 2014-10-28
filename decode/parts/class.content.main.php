@@ -2,13 +2,13 @@
 	class DC_content_main extends DC_parts_base{
 		function __construct(){
 			parent::__construct();
-			add_action( 'dc_display_media', array( $this, 'display_media' ), 10, 1 );
+			add_action( 'dc_display_media', array( $this, 'display_media' ), 10, 2 );
 			add_action( 'dc_google_map', array( $this, 'display_google_map' ) );
 			$this->load_media_class();
 		}
 
-		function display_media( $type ){
-			$media = new dc_post_media( $type );
+		function display_media( $type, $size=null ){
+			$media = new dc_post_media( $type, $size );
 			$media->display();
 		}
 

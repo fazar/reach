@@ -67,7 +67,10 @@
 		}
 
 		function add_image_sizes(){
-
+			add_image_size( 'dc-medium', 695, 350, array('center', 'center'));
+			add_image_size( 'dc-small', 385, 350, array('center', 'center'));
+			add_image_size( 'landscape', 600, 185, array('center', 'center') );
+			add_image_size( 'main-thumbnail', 600);
 		}
 
 		function fire_bootstrapper(){
