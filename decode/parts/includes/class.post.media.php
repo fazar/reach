@@ -40,6 +40,7 @@
 			$audio_mp3 = $audio['mp3'];
 		    $audio_ogg = $audio['oga'];
 			$audio_embed = $audio['embedded'];
+			$this->display_image();
 			if(!empty($audio_ogg) || !empty($audio_mp3)) {
 	        	
 				$audio_output = '[dc_audio ';

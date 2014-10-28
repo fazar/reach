@@ -21,10 +21,29 @@
   	    $('.off-sidebar-control').addClass('sidebar-moved');
   	  }
   	});
+     $(".off-sidebar").niceScroll();
+  }
+
+  reach.media = function(){
+    $('video, audio').each(function(){
+      $(this).mediaelementplayer({
+      });
+    });
+
+    var gallery = $('.dc-gallery');
+    if(gallery.length == 0) return;
+    // if(typeof manualInvoked == 'undefined' && $('video').length > 0) return;
+    gallery.imagesLoaded(function(){
+      gallery.flexslider({
+        animation : "slide",
+        controlNav: false,
+      });
+    });
   }
 
   $(document).ready(function(){
   	reach.offSidebar();
-     $(".off-sidebar").niceScroll();
+    reach.media();
+    
   });
 }( jQuery, window ));
