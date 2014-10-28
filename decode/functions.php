@@ -85,7 +85,6 @@
 		}
 
 		private function initiate_options(){
-			require_once(DC_BASE. 'decode/options.php');
 	    	if ( !class_exists( $this->config['admin-class'] ) && file_exists( DC_BASE . 'admin/admin-init.php' ) ) {
 	    	    require_once( DC_BASE. 'admin/admin-init.php' );
 	    	}
@@ -128,12 +127,12 @@
 	    }
 
 	    function register_sidebar(){
-	    	global $dc;
+	    	// global $dc;
 			foreach ($this->config['sidebar-widget-areas'] as $key => $widget_area) {
-				$options_id = 'wae_' . $widget_area['id'];
-				if( array_key_exists('wae_' . $widget_area['id'], $dc) && $dc['wae_' . $widget_area['id']] == '0'){
-					continue;
-				}
+				$options_id = 'dc_' . $widget_area['id'];
+				// if( array_key_exists('dc_' . $widget_area['id'], $dc) && $dc['dc_' . $widget_area['id']] == '0'){
+				// 	continue;
+				// }
 				register_sidebar( array(
 					'name' => $widget_area['name'],
 					'id' => $widget_area['id'],

@@ -234,6 +234,98 @@ if (!class_exists('admin_folder_Redux_Framework_config')) {
                 $sampleHTML = $wp_filesystem->get_contents(dirname(__FILE__) . '/info-html.html');
             }
 
+            $this->settings[] = array(
+                'icon' => 'el-icon-cogs',
+                'title' => __('General Settings', THEMENAME),
+                'fields' => array(
+                    array(
+                        'id' => 'dc_favicon',
+                        'type' => 'media',
+                        'title' => __('Favicon Upload', THEMENAME),
+                        'compiler' => 'true',
+                        'mode' => false,
+                        'subtitle' =>  __('Upload a 16px x 16px .ico image that will be your favicon', THEMENAME)   
+                    ),
+                    array(
+                        'id' => 'dc_use_logo',
+                        'type' => 'switch',
+                        'title' => __('Use Image for logo?', THEMENAME),
+                        'subtitle' =>  __('If left unchecked, plain text will be used instead (generated from site name).', THEMENAME),
+                        'desc' => ''
+                    ),
+                    array(
+                        'id' => 'dc_logo',
+                        'type' => 'media',
+                        'required'  => array('dc_use_logo', '=', '1'), 
+                        'title' => __('Logo Upload', THEMENAME), 
+                        'subtitle' => __('Upload your logo here and enter the height of it below', THEMENAME),
+                        'desc' => '' 
+                    ),
+                    array(
+                        'id' => 'dc_dark_logo',
+                        'type' => 'media',
+                        'required'  => array('dc_use_logo', '=', '1'), 
+                        'title' => __('Dark Logo Upload', THEMENAME), 
+                        'subtitle' => __('You can pload different logo for dark scheme header. Upload your logo here and enter the height of it below', THEMENAME),
+                        'desc' => '' 
+                    ),
+                    array(
+                        'id' => 'dc_logo_height', 
+                        'type' => 'text', 
+                        'title' => __('Logo Height', THEMENAME),
+                        'sub_desc' => __('Don\'t include "px" in the string. e.g. 30', THEMENAME),
+                        'desc' => '',
+                        'validate' => 'numeric'
+                    ),
+                     array(
+                        'id' => 'dc_hidden-sidebar', 
+                        'type' => 'switch', 
+                        'title' => __('Hidden Sidebar', THEMENAME),
+                        'sub_desc' => __('Turn on/off hidden sidebar', THEMENAME),
+                        'default' => '1'
+                    ),
+                     array(
+                        'id' => 'dc_hidden-sidebar_position', 
+                        'type' => 'radio',
+                        'required'  => array('dc_hidden-sidebar', '=', '1'),  
+                        'title' => __('Hidden Sidebar position', THEMENAME),
+                        'sub_desc' => __('Determine hidden sidebar position', THEMENAME),
+                        'default' => 'right',
+                        'options' => array(
+                            'left' => __('Left', THEMENAME),
+                            'right' => __('Right', THEMENAME)
+                        )
+                    ),
+                     array(
+                        'id' => 'dc_hidden-sidebar_color',
+                        'type' => 'radio',
+                        'required' => array('dc_hidden-sidebar', '=', '1'),
+                        'title' => __('Hidden Sidebar Color Scheme', THEMENAME),
+                        'sub_desc' => __('Choose the color scheme for hidden siderbar', THEMENAME),
+                        'default' => 'light-color',
+                        'options' => array(
+                            'light-color' => 'Light Font Color',
+                            'dark-color' => 'Dark Font Color'
+                        )
+                    ),
+                    array(
+                        'id' => 'dc_css_code',
+                        'type' => 'ace_editor',
+                        'mode' => 'css',
+                        'title' => __('CSS Code', THEMENAME),
+                        'subtitle' => __('Paste your css code here', THEMENAME)
+                    ),
+                    array(
+                        'id' => 'dc_js_code',
+                        'type' => 'ace_editor',
+                        'mode' => 'javascript',
+                        'title' => __('Javascript Code', THEMENAME),
+                        'subtitle' => __('Paste your javascript code here', THEMENAME)
+                    )
+                )
+            );
+
+
             // ACTUAL DECLARATION OF SECTIONS
             $this->sections[] = array(
                 'title'     => __('Home Settings', 'redux-framework-demo'),
