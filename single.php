@@ -15,7 +15,7 @@
 			while ( have_posts() ) : the_post();
 				?>
 				<article>
-					<div class="post-header">
+					<!-- <div class="post-header">
 						<?php 
 							$post_format = get_post_format();
 							if(!$post_format){
@@ -24,14 +24,14 @@
 								do_action('dc_display_media', get_post_format());
 							}
 						?>
-					</div>
+					</div> -->
 					<div class="post-content">
 						<ul class="post-meta">				
 							<li><?php the_category(); ?></li>							
 							<li>• <?php the_time( get_option( 'date_format' ) ); ?> </li>
 							<li>• <?php echo get_post_meta( get_the_id(), '_dc_post_views', true  ); ?> Views</li>
 						</ul>
-						<h2 class="post-title"><?php the_title() ?></h2>						
+						
 						<div class="the-content">
 						<?php the_content() ?>
 						</div>

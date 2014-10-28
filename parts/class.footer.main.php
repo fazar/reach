@@ -26,12 +26,11 @@
 			
 			?>
 			<div class="main-footer first-row">
-				<?php do_action('social_in', 'footer'); ?>
-				<div class="row">
 
-					<div class="large-offset-4 large-8 medium-8 large-offset-2 columns">
+				<div class="row">
+					<div class="large-12 columns">
 						<?php $this->display_copyright(); ?>
-						
+						<?php do_action('social_in', 'footer'); ?>		
 					</div>
 					
 				</div>

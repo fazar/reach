@@ -14,13 +14,10 @@
 											'behance','instagram','github','stack-exchange','soundcloud'  
 										);
 			$options = $this->options;
-			/*var_dump($options);*/
 			foreach ($social_accounts_array as $key => $social_account) {
 				if( !empty($options[ $section . '_use_'. $social_account]) &&  
 					$options[ $section . '_use_'.$social_account] == '1'  ){
-
-					$social_account_opt = !empty($options['dc_'.$social_account.'_url']) ? $options['dc_'.$social_account.'_url'] : '#';
-					var_dump($social_account_opt);
+					$social_account_opt = !empty($options['dc_'.$social_account.'_url']) ? $options['dc_'.$social_account.'_url'] : '#';					
 					if ($social_account == 'vimeo'){
 						$this->social_account('vimeo', $social_account_opt, '-square');
 					}else{
