@@ -9,7 +9,7 @@
 
 		function load_main_styles(){
 			if ( !is_admin() ){
-				wp_enqueue_style( 'reach', get_stylesheet_ur(), array() );
+				wp_enqueue_style( 'reach', get_stylesheet_uri(), array() );
 			}
 		}
 
