@@ -42,3 +42,197 @@ p {
 	font-family: 'Roboto Slab';
 	font-weight: 300;
 }
+.brand{
+	text-align: center;
+	padding-top: 27px;
+	height: 190px;
+}
+.brand h1{
+	font-family: Montserrat;
+	font-size: 3.75rem;
+	text-transform: uppercase;
+	line-height: 1;
+}
+.brand h1 a{
+	color:#212121;
+}
+.brand h4{
+	font-size: 1.375rem;
+	font-family: 'Roboto Slab';
+	color:#bdbdbd;
+	line-height: 1;
+	font-weight: 300;
+}
+.secondary-nav{
+	height: 60px;
+	line-height: 60px;
+	position: relative;
+}
+.secondary-nav ul{
+	margin:0;
+}
+.secondary-nav li{
+	list-style: none;
+}
+.hidden-sidebar-toggle{
+	position: absolute;
+	left:20px;
+	top:20px;
+	font-size: 1.6875rem;
+	color:#212121;
+	line-height: 1;
+}
+.search-button{
+	position: absolute;
+	right: 20px;
+	top:20px;
+}
+
+
+.off-sidebar{
+	background-color:#212121;
+	color:#bdbdbd;
+}
+	.dark-color.off-sidebar{
+		background-color: #fff;
+		color:#757575;
+	}
+	.dark-color .widget h1,
+	.dark-color .widget h2,
+	.dark-color .widget h3,
+	.dark-color .widget h4,
+	.dark-color .widget h5{
+		color:#212121;
+	}
+.off-sdebar,
+.off-sidebar p{
+	font-size: 0.75rem;
+	font-family: Open Sans;
+}
+.off-sidebar{
+	position: fixed;
+	overflow-y:auto;
+	overflow-x:hidden;
+	top:0;
+	height: 100%;
+	width: 270px;
+	padding:20px;
+	transition : left 0.6s ease-in-out,right 0.6s ease-in-out;
+	-webkit-transition : left 0.6s ease-in-out,right 0.6s ease-in-out;
+	-o-transition : left 0.6s ease-in-out,right 0.6s ease-in-out;
+	-moz-transition : left 0.6s ease-in-out,right 0.6s ease-in-out;
+	-ms-transition : left 0.6s ease-in-out,right 0.6s ease-in-out;
+}
+
+.main-container{
+	transition : margin-left 0.6s ease-in-out,margin-right 0.6s ease-in-out;
+	-webkit-transition : margin-left 0.6s ease-in-out,margin-right 0.6s ease-in-out;
+	-o-transition : margin-left 0.6s ease-in-out,margin-right 0.6s ease-in-out;
+	-moz-transition : margin-left 0.6s ease-in-out,margin-right 0.6s ease-in-out;
+	-ms-transition : margin-left 0.6s ease-in-out,margin-right 0.6s ease-in-out;
+}
+.off-sidebar.right-pos{
+	right: -274px;
+	box-shadow: -2px 0px 2px rgba(0,0,0,0.1);
+	-webkit-box-shadow: -2px 0px 2px rgba(0,0,0,0.1);
+	-o-box-shadow: -2px 0px 2px rgba(0,0,0,0.1);
+	-moz-box-shadow: -2px 0px 2px rgba(0,0,0,0.1);
+	-ms-box-shadow: -2px 0px 2px rgba(0,0,0,0.1);
+}
+.off-sidebar.left-pos{
+	left: -274px;
+	box-shadow:2px 0px 2px rgba(0,0,0,0.1);
+	-webkit-box-shadow: 2px 0px 2px rgba(0,0,0,0.1);
+	-o-box-shadow: 2px 0px 2px rgba(0,0,0,0.1);
+	-moz-box-shadow: 2px 0px 2px rgba(0,0,0,0.1);
+	-ms-box-shadow: 2px 0px 2px rgba(0,0,0,0.1);
+}
+.off-sidebar.off-move-left{
+	right: 0;
+}
+.off-sidebar.off-move-right{
+	left: 0;
+}
+.main-container.off-move-left,
+.sticky-nav.off-move-left{
+	margin-right: 270px;
+	margin-left:-270px;
+}
+.main-container.off-move-right,
+.sticky-nav.off-move-right{
+	margin-left: 270px;
+	margin-right: -270px;
+}
+
+.main-navigation{
+	/*padding-bottom: 32px;*/
+	border-bottom: 1px solid #424242;
+}
+.main-navigation ul{
+	margin:0;
+}
+.main-navigation ul li{
+	list-style: none;
+	margin-bottom: 32px;
+}
+.main-navigation ul li a{
+	font-size: 1rem;
+	font-family: 'Roboto Slab';
+	font-weight: 400;
+	color:#bdbdbd;
+}
+
+.widgets-area{
+	padding-top: 32px;
+}
+/*** Profile 1 Wiget ***/
+ .dc_about_widget {
+     margin-bottom: 30px;
+  }
+ .dc_about_widget h4{
+     font-size: 0.875rem;
+     font-family: Open Sans;
+     font-weight: 300;
+     text-transform: uppercase;
+     margin:15px 0;
+     margin-bottom: 7px;
+ }
+ .dc_about_widget p{
+     margin-bottom: 0;
+ }
+ .widget.dc_about_widget ul.about-social-media {
+	margin-left: 0px;
+	margin-top:10px;
+}
+.widget.dc_about_widget ul.about-social-media > li {
+	list-style-type: none;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.widget.dc_about_widget ul.about-social-media > li > a {
+	width: 35px;
+	height: 35px;
+	line-height: 35px;
+	font-size: 1.25rem;
+	border-radius: 24px;	
+	text-align: center;
+	vertical-align: middle;
+	color: #bdbdbd;
+	border: 1px solid #bdbdbd;
+	display: block;
+	-webkit-transition: background 0.5s ease-in-out, border 0.5s ease-in-out;
+	-moz-transition: background 0.5s ease-in-out, border 0.5s ease-in-out;
+	-o-transition: background 0.5s ease-in-out, border 0.5s ease-in-out;
+	transition: background 0.5s ease-in-out, border 0.5s ease-in-out;	
+}
+.widget.dc_about_widget ul.about-social-media > li > a:hover {
+	background: #ffff00;
+	color: #212121;
+	border-color: #ffff00;
+}
+	.dark-color .widget.dc_about_widget ul.about-social-media > li > a:hover{
+		background: #009688;
+		color: #ffffff;
+		border-color: #009688;
+	}

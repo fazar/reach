@@ -15,7 +15,7 @@
 		                    <?php echo get_bloginfo( 'name' )[0] ?>
 		                  </a>
 		                </li>
-		                <li>
+		                <li class="search-button">
 		                  <p> search form here </p>
 		                </li>
 					</ul>
