@@ -42,6 +42,59 @@ p {
 	font-family: 'Roboto Slab';
 	font-weight: 300;
 }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+a {
+	color: #212121;
+	-webkit-transition: color 0.5s ease-in-out;
+	-moz-transition: color 0.5s ease-in-out;
+	-o-transition: color 0.5s ease-in-out;
+	transition: color 0.5s ease-in-out;
+}
+
+a:hover {
+	color: #000000;
+}
+
+.post-meta,
+.post-categories,
+.post-categories a {
+	font-size: 0.875rem;
+	line-height: 1;
+	padding: 0;
+	margin: 0 0 0 0;
+	color: #bdbdbd;
+	display: inline-block;
+	font-family: 'Open Sans';
+	font-weight: 400;
+}
+
+.post-meta li{
+	display: inline;
+}
+
+.post-categories a:hover {
+	color: #212121;
+}
+
+.post-meta {
+	margin-top: 20px;
+}
+
+
+
+.post-title {
+	font-family: 'Open Sans';
+	font-weight: 400;
+	font-size: 2rem;
+}
+
 .brand{
 	text-align: center;
 	padding-top: 27px;
@@ -202,25 +255,12 @@ p {
 .widget:last-child{
 	margin-bottom: 0;
 }
-.widget > h2{
-	font-size: 1rem;
-	font-family: Raleway;
-	font-weight: 600;
-	color:#fff;
-	margin-bottom: 1rem;
-}
+
 .widget > ul > li{
 	list-style: none;
 }
 .widget > ul{
 	margin:0;
-}
-.widget h1,
-.widget h2,
-.widget h3,
-.widget h4,
-.widget h5{
-	color:#fff;
 }
 .widget,
 .widget p,
@@ -463,6 +503,7 @@ p {
 		color: #ffffff;
 		border-color: #009688;
 	}
+
 /* dc Instagram */
 
 .dc_instagram_widget ul{
@@ -1063,3 +1104,20 @@ table tfoot tr td {
  	color: #bdbdbd;
  }
 /* End Search */
+
+
+.posts-list .large-8 {
+	width: 63.88%;
+}
+
+.posts-list .large-4 {
+	width: 36.12%;
+}
+
+.post-header img {
+	width: 100%;
+}
+
+.posts-list .row {
+	margin-top: 50px;
+}

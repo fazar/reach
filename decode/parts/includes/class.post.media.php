@@ -1,8 +1,10 @@
 <?php
 	class DC_post_media{
 		private $type;
-		function __construct( $type ){
+		private $size;
+		function __construct( $type, $size ){
 			$this->type = $type;
+			$this->size = $size;
 		}
 
 		function display(){
@@ -84,7 +86,7 @@
 
 		function display_image(){
 			if ( has_post_thumbnail() ) {
-				the_post_thumbnail('main-thumbnail');
+				the_post_thumbnail($this->size);
 			} 
 		}
 
