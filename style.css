@@ -198,8 +198,7 @@ a:hover {
 	background-size: cover;	
 }
 
-.main-with-image > .row {
-	outline: 1px solid blue;
+.main-with-image > .row {	
 	height: 100%;
 	margin-top: -60px;
 	text-align: center;
@@ -210,11 +209,9 @@ a:hover {
 	vertical-align: middle;
 	float: none;
 	width: 99%;
-	outline: 1px solid yellow;
 }
 
 .main-with-image > .row:before {
-	outline: 1px solid red;
 	content: "";
 	height: 100%;
 	vertical-align: middle;
