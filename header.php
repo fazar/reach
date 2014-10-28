@@ -13,4 +13,4 @@
 	<?php do_action( 'dc_html_head' ) ?>
 	<body <?php body_class( 'main-wrapper' ) ?> >
 		<div class="main-container">
-			<?php do_action( 'rh_primary_navigation' ) ?>
+			<?php do_action( 'rh_main_header' ) ?>

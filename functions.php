@@ -63,6 +63,7 @@
 		}
 
 		function load_parts(){
+			$this->load_part( array('header', 'main') );
 		}
 
 		function add_image_sizes(){
