@@ -17,10 +17,11 @@
 		function register_scripts(){
 			wp_register_script( 'modernizr' ,DC_BASE_URL . 'js/vendor/modernizr.js' ,array( 'jquery' ), null, $in_footer = false);
 			wp_register_script( 'foundation' ,DC_BASE_URL . 'js/foundation.min.js' ,array( 'jquery' ),null, $in_footer = true);
+			wp_register_script( 'nicescroll' ,DC_BASE_URL . 'js/jquery.nicescroll.min.js' ,array( 'jquery' ),null, $in_footer = true);
 		}
 
 		function resolve_main_scripts(){
-			DC::resolves( array( 'modernizr' , 'foundation') );
+			DC::resolves( array( 'modernizr' , 'foundation', 'nicescroll') );
 		}
 
 		function load_scripts(){

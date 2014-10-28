@@ -20,9 +20,11 @@
 		                </li>
 					</ul>
 				</div>
-				<div class="brand">
+				<div class="row">
+				<div class="brand columns large-12">
 					<h1> <?php do_action( 'dc_logo' ) ?> </h1>
 					<h4> <?php echo get_bloginfo( 'description' ) ?> </h4>
+				</div>
 				</div>
 			</header>
 			<?php

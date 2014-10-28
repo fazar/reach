@@ -25,5 +25,6 @@
 
   $(document).ready(function(){
   	reach.offSidebar();
+     $(".off-sidebar").niceScroll();
   });
 }( jQuery, window ));
