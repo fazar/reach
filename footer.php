@@ -8,12 +8,12 @@
  * @since Reach 1.0
  */
 ?>
-			<?php
-				do_action( 'rh_before_footer' );
-			?>
-			<footer id="footer" class="footer">
-				<?php do_action( 'rh_main_footer' ); ?>
-			</footer>
+		<?php
+			do_action( 'rh_before_footer' );
+		?>
+		<footer id="footer" class="footer">
+			<?php do_action( 'rh_main_footer' ); ?>
+		</footer>
 		</div>
 		<?php 
 			wp_footer(); //do not remove, used by the theme and many plugins

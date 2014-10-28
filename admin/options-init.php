@@ -325,7 +325,405 @@ if (!class_exists('admin_folder_Redux_Framework_config')) {
                 )
             );
 
+            $this->sections[] = array(
 
+                    'icon' => ' el-icon-asterisk',
+                    'title' => __('Footer Options', THEMENAME),
+                    'desc' => __('All footer related options are listed here.', THEMENAME),
+                    'fields' => array(
+                        array(
+                            'id' => 'enable-main-footer-area',
+                            'type' => 'switch',
+                            'title' => __('Main Footer Area', THEMENAME), 
+                            'subtitle' => __('Do you want use the main footer that contains all the widgets areas?', THEMENAME),
+                            'desc' => '',
+                            'default' => '1' 
+                        ),                          
+                        array(
+                            'id' => 'footer-copyright-text',
+                            'type' => 'text',
+                            'title' => __('Footer Copyright Section Text', THEMENAME), 
+                            'subtitle' => __('Please enter the copyright section text. e.g. All Rights Reserved, WAELabs Corp.', THEMENAME),
+                            'desc' => __('', THEMENAME)
+                        ),
+                        array(
+                            'id' => 'use-facebook-icon',
+                            'type' => 'checkbox',
+                            'title' => __('Use Facebook Icon', THEMENAME), 
+                            'subtitle' => '',
+                            'desc' => ''
+                        ),
+                        array(
+                            'id' => 'use-twitter-icon',
+                            'type' => 'checkbox',
+                            'title' => __('Use Twitter Icon', THEMENAME), 
+                            'subtitle' => '',
+                            'desc' => ''
+                        ),
+                        array(
+                            'id' => 'use-google-plus-icon',
+                            'type' => 'checkbox',
+                            'title' => __('Use Google+ Icon', THEMENAME), 
+                            'subtitle' => '',
+                            'desc' => ''
+                        ),
+                        array(
+                            'id' => 'use-vimeo-icon',
+                            'type' => 'checkbox',
+                            'title' => __('Use Vimeo Icon', THEMENAME), 
+                            'subtitle' => '',
+                            'desc' => ''
+                        ),
+                        array(
+                            'id' => 'use-dribbble-icon',
+                            'type' => 'checkbox',
+                            'title' => __('Use Dribbble Icon', THEMENAME), 
+                            'subtitle' => '',
+                            'desc' => ''
+                        ),
+                        array(
+                            'id' => 'use-pinterest-icon',
+                            'type' => 'checkbox',
+                            'title' => __('Use Pinterest Icon', THEMENAME), 
+                            'subtitle' => '',
+                            'desc' => ''
+                        ),
+                        array(
+                            'id' => 'use-youtube-icon',
+                            'type' => 'checkbox',
+                            'title' => __('Use Youtube Icon', THEMENAME), 
+                            'subtitle' => '',
+                            'desc' => ''
+                        ),
+                        array(
+                            'id' => 'use-tumblr-icon',
+                            'type' => 'checkbox',
+                            'title' => __('Use Tumblr Icon', THEMENAME), 
+                            'subtitle' => '',
+                            'desc' => ''
+                        ),
+                        array(
+                            'id' => 'use-linkedin-icon',
+                            'type' => 'checkbox',
+                            'title' => __('Use LinkedIn Icon', THEMENAME), 
+                            'subtitle' => '',
+                            'desc' => ''
+                        ),
+                        array(
+                            'id' => 'use-rss-icon',
+                            'type' => 'checkbox',
+                            'title' => __('Use RSS Icon', THEMENAME), 
+                            'subtitle' => '',
+                            'desc' => ''
+                        ),
+
+                        array(
+                            'id' => 'use-flickr-icon',
+                            'type' => 'checkbox',
+                            'title' => __('Use Flickr Icon', THEMENAME), 
+                            'subtitle' => '',
+                            'desc' => ''
+                        ),
+                        array(
+                            'id' => 'use-skype-icon',
+                            'type' => 'checkbox',
+                            'title' => __('Use Skype Icon', THEMENAME), 
+                            'subtitle' => '',
+                            'desc' => ''
+                        ),
+                        array(
+                            'id' => 'use-behance-icon',
+                            'type' => 'checkbox',
+                            'title' => __('Use Behance Icon', THEMENAME), 
+                            'subtitle' => '',
+                            'desc' => ''
+                        ),
+                        array(
+                            'id' => 'use-instagram-icon',
+                            'type' => 'checkbox',
+                            'title' => __('Use Instagram Icon', THEMENAME), 
+                            'subtitle' => '',
+                            'desc' => ''
+                        ),
+                        array(
+                            'id' => 'use-github-icon',
+                            'type' => 'checkbox',
+                            'title' => __('Use GitHub Icon', THEMENAME), 
+                            'subtitle' => '',
+                            'desc' => ''
+                        ),
+                        array(
+                            'id' => 'use-stack-exchange-icon',
+                            'type' => 'checkbox',
+                            'title' => __('Use StackExchange Icon', THEMENAME), 
+                            'subtitle' => '',
+                            'desc' => ''
+                        ),
+                        array(
+                            'id' => 'use-soundcloud-icon',
+                            'type' => 'checkbox',
+                            'title' => __('Use SoundCloud Icon', THEMENAME), 
+                            'subtitle' => '',
+                            'desc' => ''
+                        )
+                    )            
+                );
+
+            $this->sections[] = array(
+                'icon' => 'el-icon-globe',
+                'title' => __('Social Media Options', THEMENAME),
+                'desc' => __('Enter in your social media locations here and then activate which ones you would like to display in your footer options & header options tabs. <br/><br/> <strong>Remember to include the "http://" in all URLs!</strong>', THEMENAME),
+                'fields' => array(
+                    array(
+                        'id' => 'dc_facebook_url', 
+                        'type' => 'text', 
+                        'title' => __('Facebook URL', THEMENAME),
+                        'subtitle' => __('Please enter in your Facebook URL.', THEMENAME),
+                        'desc' => ''
+                    ),
+                    array(
+                        'id' => 'dc_twitter_url', 
+                        'type' => 'text', 
+                        'title' => __('Twitter URL', THEMENAME),
+                        'subtitle' => __('Please enter in your Twitter URL.', THEMENAME),
+                        'desc' => ''
+                    ),
+                    array(
+                        'id' => 'dc_google-plus_url', 
+                        'type' => 'text', 
+                        'title' => __('Google+ URL', THEMENAME),
+                        'subtitle' => __('Please enter in your Google+ URL.', THEMENAME),
+                        'desc' => ''
+                    ),
+                    array(
+                        'id' => 'dc_vimeo_url', 
+                        'type' => 'text', 
+                        'title' => __('Vimeo URL', THEMENAME),
+                        'subtitle' => __('Please enter in your Vimeo URL.', THEMENAME),
+                        'desc' => ''
+                    ),
+                    array(
+                        'id' => 'dc_dribbble_url', 
+                        'type' => 'text', 
+                        'title' => __('Dribbble URL', THEMENAME),
+                        'subtitle' => __('Please enter in your Dribbble URL.', THEMENAME),
+                        'desc' => ''
+                    ),
+                    array(
+                        'id' => 'dc_pinterest_url', 
+                        'type' => 'text', 
+                        'title' => __('Pinterest URL', THEMENAME),
+                        'subtitle' => __('Please enter in your Pinterest URL.', THEMENAME),
+                        'desc' => ''
+                    ),
+                    array(
+                        'id' => 'dc_youtube_url', 
+                        'type' => 'text', 
+                        'title' => __('Youtube URL', THEMENAME),
+                        'subtitle' => __('Please enter in your Youtube URL.', THEMENAME),
+                        'desc' => ''
+                    ),
+                    array(
+                        'id' => 'dc_tumblr_url', 
+                        'type' => 'text', 
+                        'title' => __('Tumblr URL', THEMENAME),
+                        'subtitle' => __('Please enter in your Tumblr URL.', THEMENAME),
+                        'desc' => ''
+                    ),
+                    array(
+                        'id' => 'dc_linkedin_url', 
+                        'type' => 'text', 
+                        'title' => __('LinkedIn URL', THEMENAME),
+                        'subtitle' => __('Please enter in your LinkedIn URL.', THEMENAME),
+                        'desc' => ''
+                    ),
+                    array(
+                        'id' => 'dc_rss_url', 
+                        'type' => 'text', 
+                        'title' => __('RSS URL', THEMENAME),
+                        'subtitle' => __('If you have an external RSS feed such as Feedburner, please enter it here. Will use built in Wordpress feed if left blank.', THEMENAME),
+                        'desc' => ''
+                    ),
+                     array(
+                        'id' => 'dc_flickr_url',
+                        'type' => 'text',
+                        'title' => __('Flickr URL', THEMENAME), 
+                        'subtitle' =>__('Please enter in your Flickr URL.', THEMENAME),
+                        'desc' => ''
+                    ),
+                    array(
+                        'id' => 'dc_skype_url',
+                        'type' => 'text',
+                        'title' => __('Skype URL', THEMENAME), 
+                        'subtitle' => __('Please enter in your Skype URL.', THEMENAME),
+                        'desc' => ''
+                    ),
+                    array(
+                        'id' => 'dc_behance_url', 
+                        'type' => 'text', 
+                        'title' => __('Behance URL', THEMENAME),
+                        'subtitle' => __('Please enter in your Behance URL.', THEMENAME),
+                        'desc' => ''
+                    ),
+                    
+                    array(
+                        'id' => 'dc_instagram_url', 
+                        'type' => 'text', 
+                        'title' => __('Instagram URL', THEMENAME),
+                        'subtitle' => __('Please enter in your Instagram URL.', THEMENAME),
+                        'desc' => ''
+                    ),
+                    array(
+                        'id' => 'dc_github_url', 
+                        'type' => 'text', 
+                        'title' => __('GitHub URL', THEMENAME),
+                        'subtitle' => __('Please enter in your GitHub URL.', THEMENAME),
+                        'desc' => ''
+                    ),
+                    array(
+                        'id' => 'dc_stack-exchange_url', 
+                        'type' => 'text', 
+                        'title' => __('StackExchange URL', THEMENAME),
+                        'subtitle' => __('Please enter in your StackExchange URL.', THEMENAME),
+                        'desc' => ''
+                    ),
+                    array(
+                        'id' => 'dc_soundcloud_url', 
+                        'type' => 'text', 
+                        'title' => __('SoundCloud URL', THEMENAME),
+                        'subtitle' => __('Please enter in your SoundCloud URL.', THEMENAME),
+                        'desc' => ''
+                    )
+                )
+            );
+
+            $this->sections[] = array(
+                'icon' => 'el-icon-globe',
+                'title' => 'Footer Social Media Options',
+                'desc' => 'Disable or Enable Social Media in Footer Area',
+                'fields' => array(  
+                    array(
+                        'id' => 'footer_use_facebook',
+                        'type' => 'checkbox',
+                        'title' => __('Use Facebook Icon', THEMENAME), 
+                        'subtitle' => '',
+                        'desc' => ''
+                    ),
+                    array(
+                        'id' => 'footer_use_twitter',
+                        'type' => 'checkbox',
+                        'title' => __('Use Twitter Icon', THEMENAME), 
+                        'subtitle' => '',
+                        'desc' => ''
+                    ),
+                    array(
+                        'id' => 'footer_use_google-plus',
+                        'type' => 'checkbox',
+                        'title' => __('Use Google+ Icon', THEMENAME), 
+                        'subtitle' => '',
+                        'desc' => ''
+                    ),
+                    array(
+                        'id' => 'footer_use_vimeo',
+                        'type' => 'checkbox',
+                        'title' => __('Use Vimeo Icon', THEMENAME), 
+                        'subtitle' => '',
+                        'desc' => ''
+                    ),
+                    array(
+                        'id' => 'footer_use_dribbble',
+                        'type' => 'checkbox',
+                        'title' => __('Use Dribbble Icon', THEMENAME), 
+                        'subtitle' => '',
+                        'desc' => ''
+                    ),
+                    array(
+                        'id' => 'footer_use_pinterest',
+                        'type' => 'checkbox',
+                        'title' => __('Use Pinterest Icon', THEMENAME), 
+                        'subtitle' => '',
+                        'desc' => ''
+                    ),
+                    array(
+                        'id' => 'footer_use_youtube',
+                        'type' => 'checkbox',
+                        'title' => __('Use Youtube Icon', THEMENAME), 
+                        'subtitle' => '',
+                        'desc' => ''
+                    ),
+                    array(
+                        'id' => 'footer_use_tumblr',
+                        'type' => 'checkbox',
+                        'title' => __('Use Tumblr Icon', THEMENAME), 
+                        'subtitle' => '',
+                        'desc' => ''
+                    ),
+                    array(
+                        'id' => 'footer_use_linkedin',
+                        'type' => 'checkbox',
+                        'title' => __('Use LinkedIn Icon', THEMENAME), 
+                        'subtitle' => '',
+                        'desc' => ''
+                    ),
+                    array(
+                        'id' => 'footer_use_rss',
+                        'type' => 'checkbox',
+                        'title' => __('Use RSS Icon', THEMENAME), 
+                        'subtitle' => '',
+                        'desc' => ''
+                    ),
+
+                    array(
+                        'id' => 'footer_use_flickr',
+                        'type' => 'checkbox',
+                        'title' => __('Use Flickr Icon', THEMENAME), 
+                        'subtitle' => '',
+                        'desc' => ''
+                    ),
+                    array(
+                        'id' => 'footer_use_skype',
+                        'type' => 'checkbox',
+                        'title' => __('Use Skype Icon', THEMENAME), 
+                        'subtitle' => '',
+                        'desc' => ''
+                    ),
+                    array(
+                        'id' => 'footer_use_behance',
+                        'type' => 'checkbox',
+                        'title' => __('Use Behance Icon', THEMENAME), 
+                        'subtitle' => '',
+                        'desc' => ''
+                    ),
+                    array(
+                        'id' => 'footer_use_instagram',
+                        'type' => 'checkbox',
+                        'title' => __('Use Instagram Icon', THEMENAME), 
+                        'subtitle' => '',
+                        'desc' => ''
+                    ),
+                    array(
+                        'id' => 'footer_use_github',
+                        'type' => 'checkbox',
+                        'title' => __('Use GitHub Icon', THEMENAME), 
+                        'subtitle' => '',
+                        'desc' => ''
+                    ),
+                    array(
+                        'id' => 'footer_use_stack-exchange',
+                        'type' => 'checkbox',
+                        'title' => __('Use StackExchange Icon', THEMENAME), 
+                        'subtitle' => '',
+                        'desc' => ''
+                    ),
+                    array(
+                        'id' => 'footer_use_soundcloud',
+                        'type' => 'checkbox',
+                        'title' => __('Use SoundCloud Icon', THEMENAME), 
+                        'subtitle' => '',
+                        'desc' => ''
+                    ),
+                )
+            );
             // ACTUAL DECLARATION OF SECTIONS
        
             $theme_info  = '<div class="redux-framework-section-desc">';

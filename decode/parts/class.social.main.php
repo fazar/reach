@@ -6,7 +6,7 @@
 			add_action('dc_social_share', array($this, 'social_share' ) ) ;
 		}
 
-		function display_social_in( $section ){
+		function display_social_in( $section ) {			
 			$options = $this->options;
 			echo "<ul class='$section-social-media'>";
 			$social_accounts_array = array('facebook','twitter','google-plus','vimeo','dribbble','pinterest',
@@ -14,10 +14,13 @@
 											'behance','instagram','github','stack-exchange','soundcloud'  
 										);
 			$options = $this->options;
+			/*var_dump($options);*/
 			foreach ($social_accounts_array as $key => $social_account) {
 				if( !empty($options[ $section . '_use_'. $social_account]) &&  
 					$options[ $section . '_use_'.$social_account] == '1'  ){
-					$social_account_opt = !empty($options['wae_'.$social_account.'_url']) ? $options['wae_'.$social_account.'_url'] : '#';
+
+					$social_account_opt = !empty($options['dc_'.$social_account.'_url']) ? $options['dc_'.$social_account.'_url'] : '#';
+					var_dump($social_account_opt);
 					if ($social_account == 'vimeo'){
 						$this->social_account('vimeo', $social_account_opt, '-square');
 					}else{
