@@ -138,6 +138,8 @@ a:hover {
 }
 .hidden-sidebar-toggle a{
 	color:#212121;
+	font-family: 'Roboto Slab';
+	font-weight: 600;
 }
 .search-button{
 	position: absolute;
@@ -229,6 +231,13 @@ a:hover {
 }
 .main-navigation ul{
 	margin:0;
+}
+.main-navigation ul.dropdown{
+	padding-top: 32px;
+	padding-left: 25px;
+}
+.main-navigation ul.dropdown li a{
+	color:#757575;
 }
 .main-navigation ul li{
 	list-style: none;
