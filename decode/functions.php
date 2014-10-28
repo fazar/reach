@@ -85,7 +85,6 @@
 		}
 
 		private function initiate_options(){
-			require_once(DC_BASE. 'decode/options.php');
 	    	if ( !class_exists( $this->config['admin-class'] ) && file_exists( DC_BASE . 'admin/admin-init.php' ) ) {
 	    	    require_once( DC_BASE. 'admin/admin-init.php' );
 	    	}
