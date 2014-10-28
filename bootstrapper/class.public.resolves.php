@@ -9,7 +9,8 @@
 
 		function load_main_styles(){
 			if ( !is_admin() ){
-				wp_enqueue_style( 'reach', get_stylesheet_uri(), array() );
+				wp_register_style( 'foundation', DC_BASE_URL.'css/foundation.min.css' );
+				wp_enqueue_style( 'reach', get_stylesheet_uri(), array('foundation') );
 			}
 		}
 
