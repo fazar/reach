@@ -9,7 +9,11 @@
 		function display_main_header(){			
 			if(is_single()) {
 				$this->single_header();
-			} else {
+			} 
+			else if(is_author()){
+				$this->author_header();
+			}
+			else {
 				$this->main_header();
 			}			
 		}
@@ -68,6 +72,27 @@
 					<input type="text" value="<?php echo get_search_query() ?>" placeholder="Type Your Word Here" class="serach" name="s" id="s"  autocomplete="off" />
 				</form>
 			</div>
+			<?php
+		}
+
+		private function author_header(){
+			$curauth = (get_query_var('author_name')) ? get_user_by('slug', get_query_var('author_name')) : get_userdata(get_query_var('author'));
+			$profile_image = get_user_meta($curauth->ID, "profile_image", true);
+			?>
+			<header class="main">
+				<?php $this->secondary_nav();  ?>
+				<div class="row">
+					<div class="author columns large-8 large-offset-2">
+						<?php
+						if ( !empty($profile_image) ){
+							echo "<img src='$profile_image' alt='$curauth->display_name' />";
+						}
+						?>
+						<h1> <?php echo $curauth->display_name ?> </h1>
+						<p> <?php echo $curauth->description ?> </p>
+					</div>
+				</div>
+			</header>
 			<?php
 		}
 	}

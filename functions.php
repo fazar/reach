@@ -48,7 +48,8 @@
 					'page_options',
 					'post_format',
 					'shortcodes',
-					'tinymce_dialog'
+					'tinymce_dialog',
+					'profile_extras'
 				),
 				'include-parts' => array(
 					'header',

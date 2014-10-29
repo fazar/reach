@@ -1892,5 +1892,24 @@ textarea:focus {
 	float: none !important;
 	width: 49%;
 	outline: 1px solid blue;
-	
+}
+header .author{
+	padding-left: 32px;
+}
+
+header .author h1{
+	font-family: Montserrat;
+	font-weight: 600;
+	font-size: 3.75rem;
+	margin-left: -5px;
+}
+
+header .author p{
+	font-family: Roboto Slab;
+	font-weight:300; 
+	font-size: 1.375rem;
+	color:#bdbdbd;
+}
+header .author img{
+	margin-bottom: 20px;
 }
