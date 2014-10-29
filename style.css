@@ -1881,9 +1881,11 @@ textarea:focus {
 
 .content-left {
 	vertical-align: middle;
-	display: inline-block;
-	outline: 1px solid red;
+	display: inline-block;	
 	height: 100%;
+	float: none !important;
+	text-align: right;
+
 }
 
 .content-right {
@@ -1891,6 +1893,52 @@ textarea:focus {
 	vertical-align: middle;
 	float: none !important;
 	width: 49%;
-	outline: 1px solid blue;
-	
+	text-align: left;	
+	float: left;
 }
+
+/*.content-left .post-title:after {
+	text-align: right;	
+	float: right;
+	clear: both;
+	margin-top: 0;
+}
+
+.content-right .post-title:after {
+	text-align: left;	
+}
+
+.one-content .post-title:after {
+	content: "";
+	width: 60px;
+	height: 6px;
+	background: #dddddd;
+	display: block;
+}*/
+.one-content .post-title {
+	position: relative;
+	padding-bottom: 28px;
+	margin-bottom: 30px;
+}
+.after-title {
+	line-height: 1;
+	width: 60px;
+	height: 3px;
+	background: #dddddd;
+	display: inline-block;
+	position: absolute;
+	bottom: 0;
+}
+
+.content-left .after-title {
+	right: 0;
+}
+
+.content-right .after-title {
+	left: 0;
+}
+
+.one-content .post-content {
+	margin-bottom: 0;
+}
+	

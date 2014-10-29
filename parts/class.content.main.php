@@ -126,6 +126,12 @@
 						<div class="the-content">
 						<?php the_excerpt() ?>
 						</div>
+						<div class="post-author">
+						<?php
+							_e('By ', THEMENAME);
+							the_author_posts_link();
+						?>
+						</div>
 					</div>
 				</article>
 				<?php
@@ -146,14 +152,14 @@
 			
 			
 			while ( have_posts() ) : the_post();?>
-				<div class="row">
+				<div class="row one-content">
 					<?php
 					if($i % 2 == 0) {
-						$this->show_post_media();
-						$this->show_article();
+						$this->show_post_media('left');
+						$this->show_article('right');
 					}else {
-						$this->show_article();
-						$this->show_post_media();						
+						$this->show_article('left');
+						$this->show_post_media('right');						
 					}
 					?>
 				</div> 
@@ -162,9 +168,9 @@
 			endwhile;
 		}
 
-		private function show_post_media() {
+		private function show_post_media($position) {
 			?>
-			<div class="large-6 medium-6 columns content-left">
+			<div class="large-6 medium-6 columns content-<?php echo $position; ?>">
 				<?php
 					$post_format = get_post_format();
 					if(!$post_format){
@@ -177,8 +183,8 @@
 			<?php
 		}
 
-		private function show_article() { ?>
-			<article class="large-6 medium-6 columns content-right">
+		private function show_article($position) { ?>
+			<article class="large-6 medium-6 columns content-<?php echo $position; ?>">
 				<div class="post-content">						
 					<ul class="post-meta">				
 						<li><?php the_category(); ?></li>							
@@ -188,9 +194,17 @@
 					<h2 class="post-title">
 						<a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
 							<?php the_title(); ?></a>
+							<span class="after-title"></span>
 					</h2>
+
 					<div class="the-content">
-					<?php the_excerpt() ?>
+						<?php the_excerpt() ?>
+					</div>
+					<div class="post-author">
+						<?php
+							_e('By ', THEMENAME);
+							the_author_posts_link();
+						?>
 					</div>
 				</div>
 			</article>

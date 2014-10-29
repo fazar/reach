@@ -17,6 +17,8 @@
 			parent::__construct();
 			$this->add_image_sizes();
 			$this->fire_bootstrapper();
+			add_filter( 'excerpt_length', array($this, 'custom_excerpt_length'), 999 );
+			add_filter('excerpt_more', array($this, 'new_excerpt_more'), 999);
 		}
 
 		function define_config(){
@@ -82,6 +84,15 @@
 			require_once(DC_BASE . 'bootstrapper/class.public.resolves.php');
 			new RH_public_resolves;
 		}
+
+		function custom_excerpt_length( $length ) {
+			return 20;
+		}
+
+		function new_excerpt_more( $more ) {
+			return ' ...';
+		}
+
 	}
 	new Reach;
 	
