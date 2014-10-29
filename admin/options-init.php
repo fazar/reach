@@ -326,6 +326,26 @@ if (!class_exists('admin_folder_Redux_Framework_config')) {
             );
 
             $this->sections[] = array(
+                'icon' => ' el-icon-asterisk',
+                    'title' => __('Blog Options', THEMENAME),
+                    'desc' => __('All blog options are listed here.', THEMENAME),
+                    'fields' => array(                        
+                        array(
+                            'id' => 'blog-layout',
+                            'type' => 'select', 
+                            'title' => __('Blog Layout', THEMENAME),
+                            'subtitle' => __('Determine the layout of your blog', THEMENAME),
+                            'options' => array(
+                                '1' => 'One Post Per Line',
+                                '2' => 'Two Post Per Line'
+                            ),
+                            'default' => '1'
+                        )
+                    )
+            );
+            
+
+            $this->sections[] = array(
 
                     'icon' => ' el-icon-asterisk',
                     'title' => __('Footer Options', THEMENAME),

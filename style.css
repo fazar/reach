@@ -1870,3 +1870,27 @@ textarea:focus {
 .our-fields-wrapper:hover .our-fields-desc{
 	color:#757575;
 }
+
+/*.two-content {
+	content: "";
+	height: 100%;
+	vertical-align: middle;
+	display: inline-block;
+	outline: 1px solid red;
+}*/
+
+.content-left {
+	vertical-align: middle;
+	display: inline-block;
+	outline: 1px solid red;
+	height: 100%;
+}
+
+.content-right {
+	display: inline-block;
+	vertical-align: middle;
+	float: none !important;
+	width: 49%;
+	outline: 1px solid blue;
+	
+}

@@ -41,6 +41,14 @@
     });
   }
 
+  reach.backgroundFullScreen = function() {
+    console.log($('.main-with-image').length);
+    if($('.main-with-image').length > 0) {
+      console.log($(window).height());
+      $('.main-with-image').height($(window).height());
+    }
+  }
+
   reach.googleMap = function(){
     var $mapHolder = $('#map-holder');
     if ( $mapHolder.length ==  0) return;
@@ -210,5 +218,6 @@
       }
     });
     reach.googleMap();
+    reach.backgroundFullScreen();
   });
 }( jQuery, window ));
