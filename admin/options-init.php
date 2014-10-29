@@ -724,6 +724,126 @@ if (!class_exists('admin_folder_Redux_Framework_config')) {
                     ),
                 )
             );
+
+            $this->sections[] = array(
+                'icon' => ' el-icon-map-marker',
+                'title' => __('Contact Options', THEMENAME),
+                'desc' => __('All contact page related options are listed here.', THEMENAME),
+                'fields' => array( 
+                    array(
+                        'id' => 'map_zoom_level',
+                        'type' => 'text',
+                        'title' => __('Defautl Map Zoom Level', THEMENAME), 
+                        'subtitle' => __('Value should be between 1-18, 1 being the entire earth and 18 being right at street level.', THEMENAME),
+                        'desc' => __('', THEMENAME),
+                        'default' => '15' 
+                    ),
+                    array(
+                        'id' => 'map_enable_zoom',
+                        'type' => 'checkbox',
+                        'title' => __('Enable Map Zoom In/Out', THEMENAME), 
+                        'subtitle' => __('Do you want users to be able to zoom in/out on the map?', THEMENAME),
+                        'desc' => __('', THEMENAME),
+                        'default' => '0' 
+                    ),
+                    array(
+                        'id' => 'map_marker',
+                        'type' => 'media',
+                        'title' => __('Use local image as a marker', THEMENAME),
+                        'subtitle' => __('Upload your custom marker here', THEMENAME),
+                        'desc' => ''
+                    ),
+                    array(
+                        'id' => 'map_coordinate',
+                        'type' => 'text',
+                        'title' => __('Map center Coordinate', THEMENAME), 
+                        'subtitle' => __('Please enter the coordinate for the maps center point. example : (-6.907342,107.645399) ', THEMENAME),
+                        'desc' => __('', THEMENAME)
+                    ),
+                    array(
+                        'id'=>'map_positions',
+                        'type' => 'multi_text',
+                        'title' => __('Locations', THEMENAME),
+                        'subtitle' => __('Add your locations coordinate. example : (-6.907342,107.645399)', THEMENAME),
+                        'desc' => __('', THEMENAME)
+                    ),
+                    array(
+                        'id'=>'map_position_infos',
+                        'type' => 'multi_text',
+                        'title' => __('Location Infos', THEMENAME),
+                        'subtitle' => __('Add your location info according to location input order', THEMENAME),
+                        'desc' => __('', THEMENAME)
+                    ),      
+                    array(
+                        'id'=>'map_type',
+                        'type' => 'radio',
+                        'title' => __('Map Type', THEMENAME),
+                        'subtitle' => __('Choose your type of map display', THEMENAME),
+                        'desc' => __('', THEMENAME),
+                        'options' => array(
+                            'styled' => 'Styled',
+                            'regular' => 'Regular'
+                        ),
+                        'default' => 'regular'
+                    ),
+                    array(
+                        'id' => 'map_color',
+                        'required' => array('map_type', '=', 'styled'), 
+                        'type' => 'select', 
+                        'title' => __('Map Color', THEMENAME),
+                        'subtitle' => __('Determine the color of styled map', THEMENAME),
+                        'options' => array(
+                            'primary_color' => 'Primary Color',
+                            'secondary_color' => 'Secondary Color',
+                            'secondary_complement_color' => 'Secondar Complement Color'
+                        ),
+                        'default' => 'primary_color'
+                    ),
+                    /*array(
+                        'id' => 'contact_address_label',
+                        'type' => 'text',
+                        'title' => __('Address Label', THEMENAME),
+                        'subtitle' => __('Will be displayed as heading title for address section', THEMENAME),
+                        'default' => __('Our Humble Headquarter', THEMENAME)
+                    ),*/
+                    array(
+                        'id' => 'contact_address',
+                        'type' => 'editor',
+                        'title' => __('Contact Address', THEMENAME),
+                        'subtitle' => __('Your office address', THEMENAME),
+                        'args'   => array(
+                                'teeny'            => true,
+                                'textarea_rows'    => 10
+                            )
+                    ), 
+                    array(
+                        'id' => 'phone_number',
+                        'type' => 'text',
+                        'title' => __('Phone Number', THEMENAME),
+                        'subtitle' => __('Your Phone Number or Your Office Phone Number', THEMENAME)                        
+                    ), 
+                     array(
+                        'id' => 'email',
+                        'type' => 'text',
+                        'title' => __('Email', THEMENAME),
+                        'subtitle' => __('Your Email or Your Office Mail', THEMENAME)                        
+                    ),
+                   /* array(
+                        'id' => 'contact_social_label',
+                        'type' => 'text',
+                        'title' => __('Social Accounts Label', THEMENAME),
+                        'subtitle' => __('Will be displayed as heading title for social accounts section', THEMENAME),
+                        'default' => __('Also Find Us On', THEMENAME)
+                    ),*/
+                    array(
+                        'id' => 'contact_form_label',
+                        'type' => 'text',
+                        'title' => __('Contact Form Label', THEMENAME),
+                        'subtitle' => __('Will be displayed as heading title for contact form section', THEMENAME),
+                        'default' => __('Leave Us A Message. Will Ya ?', THEMENAME)
+                    )                          
+                )
+            );
             // ACTUAL DECLARATION OF SECTIONS
        
             $theme_info  = '<div class="redux-framework-section-desc">';

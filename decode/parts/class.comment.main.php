@@ -19,7 +19,8 @@
 			if ( have_comments() ) :
 			?>
 				<ul id="comments">
-					<li><h4 class="comment-reply-title"><?php echo $this->get_comment_number() ?> | Leave a Comment </h4></li>
+					<li><h4 class="comment-reply-title"><?php echo $this->get_comment_number() ?> | 
+						<a href="#respond" id="add-comments" onclick="javascript:document.getElementById('cancel-comment-reply-link').click()">Add Comments</a> </h4></li>
 					
 				</ul>
 				<div class="navigation">
