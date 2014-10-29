@@ -21,7 +21,7 @@
 			$map_positions = (!empty($options['map_positions']) ? implode(';', $options['map_positions']) :  '');
 			$position_infos =  (!empty($options['map_position_infos']) ? implode('#;#', $options['map_position_infos']) :  '');
 			$marker_image = (!empty($options['map_marker'])) ? $options['map_marker']['url'] : '';
-			$accent_color = !empty($options['map_color']) ? $options[$options['map_color']] : '';
+			$accent_color = !empty($options['map_color']) ? $options['map_color'] : '';
 			$type = $options['map_type'];
 			?>
 			<div id="map-holder" 

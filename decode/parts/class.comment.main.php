@@ -19,8 +19,10 @@
 			if ( have_comments() ) :
 			?>
 				<ul id="comments">
-					<li><?php comments_number(__('No Comments',THEMENAME), __('One Comment', THEMENAME), __('% Comments', THEMENAME) );?></li><!--
-					--><li><a href="#respond" id="add-comments" onclick="javascript:document.getElementById('cancel-comment-reply-link').click()">Add Comments</a></li></ul>
+					<li><h4 class="comment-reply-title"><?php echo $this->get_comment_number() ?> | 
+						<a href="#respond" id="add-comments" onclick="javascript:document.getElementById('cancel-comment-reply-link').click()">Add Comments</a> </h4></li>
+					
+				</ul>
 				<div class="navigation">
 					<div class="alignleft"><?php previous_comments_link() ?></div>
 					<div class="alignright"><?php next_comments_link() ?></div>
@@ -43,6 +45,18 @@
 			endif;
 		}
 
+		private function get_comment_number() {
+			global $post;
+			$comment_number = get_comments_number($post->ID);
+			if($comment_number == 0) {
+				return __( 'No Comment', THEMENAME );		
+			} else if ($comment_number == 1) {
+				return __( '1 Comment', THEMENAME );
+			} else if ($comment_number > 1) {
+				return __( $comment_number. ' Comments', THEMENAME );
+			}			
+		}
+
 		function form(){
 			if ( comments_open() ){
 				global $post;
@@ -53,17 +67,17 @@
       			get_currentuserinfo();
       			$user_identity = $current_user->user_identity;
 				$required_text = null;
-				$col = is_user_logged_in() ? '12' : '6';
+				//$col = is_user_logged_in() ? '12' : '6';
 				$args = array(
 				  'id_form'           => 'commentform',
 				  'id_submit'         => 'submit',
-				  'title_reply'       => __( 'Leave a Comment', THEMENAME ),
+				  'title_reply'       => '<h4 class="comment-reply-title">'. __( 'Leave a Comment', THEMENAME ).' </h4>',				  				
 				  'title_reply_to'    => __( 'Leave a Reply to %s', THEMENAME ),
 				  'cancel_reply_link' => __( 'Cancel Reply', THEMENAME ),
 				  'label_submit'      => __( 'Submit', THEMENAME ),
 
-				  'comment_field' =>  '<div class="comment-textarea large-'.$col.' columns"><p><label for="comment">' . __( 'Comment', THEMENAME ) .
-				      '</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p></div>',
+				  'comment_field' =>  '<p><label for="comment">' . __( 'Comment', THEMENAME ) .
+				      '</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>',
 
 				  'must_log_in' => '<p class="must-log-in">' .
 				    sprintf(
@@ -88,7 +102,7 @@
 				  'fields' => apply_filters( 'comment_form_default_fields', array(
 
 				    'author' =>
-				      '<div class="large-6 columns comment-personal-data"><p><label for="author">' . __( 'Name', THEMENAME ) .
+				      '<p><label for="author">' . __( 'Name', THEMENAME ) .
 				      ' <span class="required">*</span></label> ' .
 				      '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
 				      '" size="30" /></p>',
@@ -103,7 +117,7 @@
 				      '<p><label for="url">' .
 				      __( 'Website', THEMENAME ) . '</label>' .
 				      '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) .
-				      '" size="30" /></p></div>'
+				      '" size="30" /></p>'
 				    )
 				  ),
 				);

@@ -68,6 +68,7 @@
 			$this->load_part( array('sidebar', 'hidden') );
 			$this->load_part( array('content', 'main') );
 			$this->load_part( array('footer', 'main') );
+			$this->load_part( array('contact', 'main') );
 		}
 
 		function add_image_sizes(){
