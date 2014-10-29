@@ -44,6 +44,13 @@
   $(document).ready(function(){
   	reach.offSidebar();
     reach.media();
-    
+    $('.search-button').click(function(){
+      if($('.main-search-form').css('display') == 'none'){
+        $('.main-search-form').slideDown();
+        $('.main-search-form input').focus();
+      }else{
+        $('.main-search-form').slideUp();
+      }
+    });
   });
 }( jQuery, window ));

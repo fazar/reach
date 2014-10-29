@@ -4,6 +4,9 @@
 			$this->instantiate('audio');
 			$this->instantiate('video');
 			$this->instantiate('share');
+			$this->instantiate('row');
+			$this->instantiate('team_member');
+			$this->instantiate('our_fields');
 		}
 	}
 ?>

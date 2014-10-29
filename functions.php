@@ -47,7 +47,8 @@
     			'include-modules' => array(
 					'page_options',
 					'post_format',
-					'shortcodes'
+					'shortcodes',
+					'tinymce_dialog'
 				),
 				'include-parts' => array(
 					'header',
@@ -65,6 +66,7 @@
 		function load_parts(){
 			$this->load_part( array('header', 'main') );
 			$this->load_part( array('sidebar', 'hidden') );
+			$this->load_part( array('content', 'main') );
 			$this->load_part( array('footer', 'main') );
 		}
 

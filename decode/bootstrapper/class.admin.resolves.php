@@ -46,6 +46,10 @@
 		}
 
 		function load_styles(){
+			wp_register_style( 'admin-style', DC_BASE_URL.'css/admin-style.css' );
+			wp_register_style( 'font-awesome', DC_BASE_URL.'css/font-awesome.min.css' );
+			wp_enqueue_style( 'admin-style' );
+			wp_enqueue_style( 'font-awesome' );
 			wp_enqueue_style('wp-color-picker');
 		}
 	}
