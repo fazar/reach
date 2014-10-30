@@ -152,7 +152,8 @@ a:hover {
 }
 
 .post-meta {
-	margin-top: 20px;
+	padding-top: 80px;
+	padding-bottom: 40px;
 }
 
 .post-title {
@@ -1266,20 +1267,18 @@ table tfoot tr td {
 }
 
 .posts-list > .row{
-	margin-top: 50px;
+	/*margin-top: 50px;*/
 }
 
-.single-blogpost {
-	margin-top: 60px;
-}
-
-.single-blogpost .post-meta {
-	margin-bottom: 40px;
+.two-content,
+.one-content {
+	padding-top: 50px;
 }
 
 .pagination-wrapper{
-    text-align: center;
-    margin-bottom: 30px;
+    text-align: center;    
+    padding-top: 80px;
+	padding-bottom: 10px;
 }
 .page-numbers{
     font-size: 1.125rem;
@@ -1478,8 +1477,13 @@ table tfoot tr td {
 	margin:0;
 }
 .main-footer {
-	margin: 80px 0 100px;
+	/*margin: 80px 0 100px;*/
 }
+
+footer#footer {
+	padding: 40px 0;
+}
+
 .footer-social-media {
 	margin-top: 20px;
 }
@@ -1823,7 +1827,7 @@ span.says {
 
 .contact-us-attribute {
 	position: absolute;
-	right: -184px;
+	right: -92px;
 	bottom: 0;
 }
 
@@ -1851,6 +1855,7 @@ span.says {
  	word-wrap:break-word;
 	color: #bdbdbd;
 	text-align: right;
+	font-style: italic;
 }
 
 .contact-us-attribute li {
@@ -1890,6 +1895,7 @@ span.says {
 	background: #f5f5f5;
 	color: #bdbdbd;
 	vertical-align: top;
+	cursor: default;
 }
 
 .contact-form-label {
@@ -2101,6 +2107,77 @@ header .author img{
 .sticky-nav .top-bar-section > ul > li:not(.has-form) > a:not(.button),
 .sticky-nav .top-bar-section > ul > li.active:not(.has-form) > a:not(.button){
 	line-height: 60px;
+}
+
+a.quote.whole-link {
+	background-repeat: no-repeat;
+	display: block;
+	min-height: 400px;
+	background-size: cover;
+	position: relative;
+	text-align: left;
+}
+a.quote.whole-link:after{
+	position: absolute;
+	content: '';
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	top:0;
+	left:0;
+	z-index: 0;
+	opacity: 0;
+	transition:opacity 0.6s ease-in-out;
+}
+a.quote.whole-link:hover:after{
+	opacity: 0.7;
+}
+a.quote.whole-link:before{
+	width: 20px;
+	height: 100%;
+	min-height: 400px;
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+}
+a.quote.whole-link > div{
+	max-width: 500px;
+	display: inline-block;
+	vertical-align: middle;
+	z-index: 1;
+	position: relative;
+}
+a.quote.whole-link:hover img{	
+	opacity: 70%;
+}
+
+.whole-link:hover .semi-dark-cover{
+	background-color: transparent;
+
+}
+.whole-link .quote-content,
+.whole-link .link-url{
+	font-family: 'Open Sans';
+	font-weight: 300;
+	color: #fff;
+	font-size: 24px;
+	text-align: left;
+}
+.whole-link .quote-author,
+.whole-link .link-title{
+	font-family: 'Open Sans';
+	font-weight: 600;
+	color:#fff;
+	font-size: 0.875rem;
+	text-transform: uppercase;
+	text-align: left;
+}
+.whole-link .quote-wrapper,
+.whole-link .link-wrapper{
+	max-width: 500px;
+	display: inline-block;
+	padding:20px 0;
+
 }
 
 
