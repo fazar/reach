@@ -50,7 +50,8 @@
 					'page_options',
 					'post_format',
 					'shortcodes',
-					'tinymce_dialog'
+					'tinymce_dialog',
+					'profile_extras'
 				),
 				'include-parts' => array(
 					'header',
@@ -86,7 +87,7 @@
 		}
 
 		function custom_excerpt_length( $length ) {
-			return 20;
+			return 30;
 		}
 
 		function new_excerpt_more( $more ) {

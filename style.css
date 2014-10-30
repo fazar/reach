@@ -1358,29 +1358,29 @@ table tfoot tr td {
 	display: inline-block;
 	padding:100px 0;
 }
-.post-header .mejs-container{
+.mejs-container{
     background:transparent;
 }
-.post-header .mejs-container .mejs-controls{
+.mejs-container .mejs-controls{
     background:rgba(0,0,0,0.87);
 }
-.post-header .mejs-controls .mejs-time-rail .mejs-time-total{
+.mejs-controls .mejs-time-rail .mejs-time-total{
     background:rgba(255,255,255,0.87);
     margin: 9px 5px;
 }
-.post-header .mejs-controls .mejs-time-rail .mejs-time-current{
+.mejs-controls .mejs-time-rail .mejs-time-current{
     background:#fff;
 }
-.post-header .mejs-controls .mejs-time-rail span{
+.mejs-controls .mejs-time-rail span{
     height: 3px;
     border-radius: 2px;
 }
-.post-header .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total,
-.post-header .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current{
+.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total,
+.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current{
     height: 3px;
     top:14px;
 }
-.post-header .mejs-controls .mejs-time-rail .mejs-time-loaded{
+.mejs-controls .mejs-time-rail .mejs-time-loaded{
     background:#bdbdbd;
 }
 .mejs-container:not(.mejs-audio) {
@@ -1398,7 +1398,7 @@ table tfoot tr td {
   width: 100% !important;
   height: 100% !important;
 }
-.post-header .mejs-overlay-button{
+.mejs-overlay-button{
     background:url(css/mediaelement/play-button.png);
     position: relative;
     background-position: center center;
@@ -1420,15 +1420,15 @@ table tfoot tr td {
     height: 42px;
     margin:-21px 0 0 -21px !important;
  }
- .post-header .mejs-overlay:hover .mejs-overlay-button{
+ .mejs-overlay:hover .mejs-overlay-button{
     background-position: center center;
     background-color:#212121;
     border-color:#212121;
  }
- .post-header .mejs-overlay-button:hover:before{
+ .mejs-overlay-button:hover:before{
     opacity: 0;
  }
- .post-header .mejs-overlay-button:before{
+ .mejs-overlay-button:before{
  }
  /**** Flexslider ****/
 
@@ -1974,5 +1974,23 @@ textarea:focus {
 	color: #bdbdbd;	
 }
 
+header .author{
+	padding-left: 32px;
+}
 
-	
+header .author h1{
+	font-family: Montserrat;
+	font-weight: 600;
+	font-size: 3.75rem;
+	margin-left: -5px;
+}
+
+header .author p{
+	font-family: Roboto Slab;
+	font-weight:300; 
+	font-size: 1.375rem;
+	color:#bdbdbd;
+}
+header .author img{
+	margin-bottom: 20px;
+}
