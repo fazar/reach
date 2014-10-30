@@ -854,13 +854,13 @@ if (!class_exists('admin_folder_Redux_Framework_config')) {
                         ),
                         'default' => 'primary_color'
                     ),
-                    /*array(
-                        'id' => 'contact_address_label',
+                    array(
+                        'id' => 'contact_title',
                         'type' => 'text',
-                        'title' => __('Address Label', THEMENAME),
-                        'subtitle' => __('Will be displayed as heading title for address section', THEMENAME),
-                        'default' => __('Our Humble Headquarter', THEMENAME)
-                    ),*/
+                        'title' => __('Contact Title', THEMENAME),
+                        'subtitle' => __('Will be displayed as title on the left map', THEMENAME),
+                        'default' => __('It\'s All About Our Contact Information', THEMENAME)
+                    ),
                     array(
                         'id' => 'contact_address',
                         'type' => 'editor',

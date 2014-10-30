@@ -11,29 +11,33 @@
 			$blog_layout = !empty($options['blog_layout']) ? 
 			$options['blog_layout'] : $blog_layout;
 			$contact_form_label = !empty($options['contact_form_label']) ? $options['contact_form_label'] : '';
+			$contact_title = !empty($options['contact_title']) ? $options['contact_title'] : '';
 				?>
 				<div class="row main-content" >
-					<div class="large-offset-2 large-8 medium-8 large-offset-2 columns" >
-						<?php do_action('dc_google_map') ?>
-						<div id="contact-content">
+					<div class="large-8 medium-8 large-centered columns">
+						<div class="map-wrapper">
+							<div class="divider-contact-title"></div>
+							<span class='contact-title'><?php echo $contact_title; ?></span>
+							<?php do_action('dc_google_map') ?>
 							<ul class="contact-us-attribute">
-								<li><i class="fa fa-home"></i><?php echo !empty($options['contact_address']) ? $options['contact_address'] : ''; ?></li>
-								<li><i class="fa fa-paper-plane"></i><?php echo !empty($options['email']) ? $options['email'] : ''; ?></li>
-								<li><i class="fa fa-phone"></i><?php echo !empty($options['phone_number']) ? $options['phone_number'] : ''; ?></li>
+								<li><a><i class="fa fa-home"></i></a><span><?php echo !empty($options['contact_address']) ? $options['contact_address'] : ''; ?></span></li>
+								<li><a><i class="fa fa-paper-plane"></a></i><span><?php echo !empty($options['email']) ? $options['email'] : ''; ?></span></li>
+								<li><a><i class="fa fa-phone"></a></i><span><?php echo !empty($options['phone_number']) ? $options['phone_number'] : ''; ?></span></li>
 							</ul>					
-							<ul>
-								<li class='contact-form-label'><?php echo $contact_form_label ?></li>
-							</ul>
-						
-						<?php do_action('social_in','contact') ?>
-						<!-- <h3><?php echo $options['contact_form_label'] ?></h3> -->
-						<?php 
-							while(have_posts()) : the_post();
-								the_content();
-							endwhile; 
-						?>
+							
 						</div>
-					</div>					
+					</div>	
+					<div class="large-8 medium-8 large-centered columns">
+						<ul>
+							<li class='contact-form-label'><?php echo $contact_form_label ?></li>
+						</ul>
+					<?php 
+						while(have_posts()) : the_post();
+							the_content();
+						endwhile; 
+					?>
+					</div>
+									
 				</div>
 				<?php
 		}

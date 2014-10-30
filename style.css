@@ -1810,20 +1810,96 @@ span.says {
 	text-align: center;
 }
 
+.map-wrapper {
+	position: relative;	
+}
+
 #map-holder {
 	height: 700px;
 	margin-bottom: 50px;
 	margin-top: 50px;
+	width: 552px;
+}
+
+.contact-us-attribute {
+	position: absolute;
+	right: -184px;
+	bottom: 0;
+}
+
+.divider-contact-title {	
+	content: " ";
+	width: 60px;
+	height: 1px;
+	background: #bdbdbd;
+	position: absolute;
+	left: -80px;
+}
+
+.wpcf7 {
+	width: 552px;
+}
+
+.contact-title {
+	position: absolute;
+	top: 20px;
+	left: -195px;
+	width: 174px;
+	font-family: 'Open Sans';
+	font-weight: 300;
+	font-size: 0.875rem;
+ 	word-wrap:break-word;
+	color: #bdbdbd;
+	text-align: right;
 }
 
 .contact-us-attribute li {
-	font-family: 'Open Sans';
-	font-size: 1.5rem;
+	font-family: 'Open Sans';	
 	padding: 0;
-	margin: 0;
-	margin-bottom: 40px;
+	margin-top: 20px;	
 	line-height: 1;
+	position: relative;
+	cursor: default;
+}
+
+.contact-us-attribute li:hover > a,
+.contact-us-attribute li:hover > span {
+	background: #212121;
+	color: #f5f5f5;
+}
+
+.contact-us-attribute > li > span {
+	width: 180px;
+	display: inline-block;
+	background: #f5f5f5;
+	padding: 11px;
+	word-wrap: break-word;
 	color: #bdbdbd;
+}
+
+.contact-us-attribute > li > a {
+	width: 48px;
+	height: 48px;
+	line-height: 48px;
+	font-size: 1.6875rem;
+	border-radius: 24px;
+	display: inline-block;
+	border: 1px solid #f5f5f5;	
+	text-align: center;
+	margin-right: 20px;
+	background: #f5f5f5;
+	color: #bdbdbd;
+	vertical-align: top;
+}
+
+.contact-form-label {
+	font-family: 'Open Sans';
+	color: #bdbdbd;
+	font-size: 2.25rem;
+	line-height: 1;
+	padding: 0;
+	margin-top: 85px;
+	margin-bottom: 70px;
 }
 
 .wpcf7-form > p {	
@@ -1854,19 +1930,6 @@ textarea:focus {
 	background: transparent;
 }
 
-.contact-us-attribute > li > i.fa {
-	margin-right: 40px;
-}
-
-.contact-form-label {
-	font-family: 'Open Sans';
-	color: #bdbdbd;
-	font-size: 2.25rem;
-	line-height: 1;
-	padding: 0;
-	margin-top: 85px;
-	margin-bottom: 70px;
-}
 .our-fields-wrapper:hover .our-fields-desc{
 	color:#757575;
 }
