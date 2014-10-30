@@ -340,6 +340,41 @@ if (!class_exists('admin_folder_Redux_Framework_config')) {
                                 '2' => 'Two Post Per Line'
                             ),
                             'default' => '1'
+                        ),
+                        array(
+                        'id' => 'blog_social',
+                        'type' => 'switch',
+                        'title' => __('Social Media Sharing Buttons', THEMENAME), 
+                        'subtitle' => __('Activate this to enable social sharing buttons on your blog posts.', THEMENAME),
+                        'desc' => '',
+                        
+                        ),  
+                         array(
+                            'id' => 'blog_facebook_sharing',
+                            'type' => 'checkbox',
+                            'title' => __('Facebook', THEMENAME), 
+                            'subtitle' => 'Share it.',
+                            'default' => '1',
+                            'desc' => '',
+                            'required' => array( 'blog_social', '=', '1' )
+                        ),
+                        array(
+                            'id' => 'blog_twitter_sharing',
+                            'type' => 'checkbox',
+                            'title' => __('Twitter', THEMENAME), 
+                            'subtitle' => 'Tweet it.',
+                            'default' => '1', 
+                            'desc' => '',
+                            'required' => array( 'blog_social', '=', '1' )
+                        ),
+                        array(
+                            'id' => 'blog_pinterest_sharing',
+                            'type' => 'checkbox',
+                            'title' => __('Pinterest', THEMENAME), 
+                            'subtitle' => 'Pin it.',
+                            'default' => '1',
+                            'desc' => '',
+                            'required' => array( 'blog_social', '=', '1' )
                         )
                     )
             );
@@ -819,13 +854,13 @@ if (!class_exists('admin_folder_Redux_Framework_config')) {
                         ),
                         'default' => 'primary_color'
                     ),
-                    /*array(
-                        'id' => 'contact_address_label',
+                    array(
+                        'id' => 'contact_title',
                         'type' => 'text',
-                        'title' => __('Address Label', THEMENAME),
-                        'subtitle' => __('Will be displayed as heading title for address section', THEMENAME),
-                        'default' => __('Our Humble Headquarter', THEMENAME)
-                    ),*/
+                        'title' => __('Contact Title', THEMENAME),
+                        'subtitle' => __('Will be displayed as title on the left map', THEMENAME),
+                        'default' => __('It\'s All About Our Contact Information', THEMENAME)
+                    ),
                     array(
                         'id' => 'contact_address',
                         'type' => 'editor',

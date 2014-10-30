@@ -30,6 +30,9 @@
 	                <li class="search-button">
 	                 	<i class="fa fa-search"></i>
 	                </li>
+	                <li>
+	                	<?php do_action('dc_social_share'); ?>
+	                </li>
 				</ul>
 			</div>
 			<?php
