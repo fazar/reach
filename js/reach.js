@@ -49,6 +49,31 @@
     }
   }
 
+  reach.stickyMenu = function() {
+    if(Modernizr.mq('(min-width: 40.063em)')){
+      var navClone = $('.secondary-nav').clone(true)
+          .addClass('sticky-nav');   
+      $('body').append(navClone);    
+
+      $(window).scroll(function() {
+        if ( $(window).scrollTop()  >= $(window).height()-10 )  {
+          var $stickyNav = $('.sticky-nav');
+          if( !$stickyNav.hasClass('animated') ){
+            $stickyNav.addClass('animated');
+          }
+        } else {
+          var $stickyNav = $('.sticky-nav');
+          if( !$stickyNav.hasClass('reverse') ){
+            $stickyNav.addClass('reverse');
+            setTimeout(function(){
+              $stickyNav.removeClass('animated reverse');
+            },100);
+          }                      
+        }
+      });
+    }
+  }
+
   reach.googleMap = function(){
     var $mapHolder = $('#map-holder');
     if ( $mapHolder.length ==  0) return;
@@ -219,5 +244,6 @@
     });
     reach.googleMap();
     reach.backgroundFullScreen();
+    reach.stickyMenu();
   });
 }( jQuery, window ));

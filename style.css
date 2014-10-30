@@ -2057,3 +2057,50 @@ header .author p{
 header .author img{
 	margin-bottom: 20px;
 }
+
+.secondary-nav > ul {
+	height: 100%;
+	width: 100%;
+}
+
+.sticky-nav {
+	position: fixed;
+	background-color: #ffffff;
+	border-bottom: 1px solid #e0e0e0;
+	top:-60px;
+	transition : top 0.2s ease-in-out,opacity 0.2s ease-in-out,margin-left 0.6s ease-in-out,margin-right 0.6s ease-in-out;
+	-webkit-transition : top 0.2s ease-in-out,opacity 0.2s ease-in-out,margin-left 0.6s ease-in-out,margin-right 0.6s ease-in-out;
+	-moz-transition : top 0.2s ease-in-out,opacity 0.2s ease-in-out,margin-left 0.6s ease-in-out,margin-right 0.6s ease-in-out;
+	-o-transition : top 0.2s ease-in-out,opacity 0.2s ease-in-out,margin-left 0.6s ease-in-out,margin-right 0.6s ease-in-out;
+	-ms-transition : top 0.2s ease-in-out,opacity 0.2s ease-in-out,margin-left 0.6s ease-in-out,margin-right 0.6s ease-in-out;
+	opacity: 0;
+	-webkit-backface-visibility: hidden;    
+	-moz-backface-visibility: hidden;   
+	-ms-backface-visibility: hidden;    
+	backface-visibility: hidden;
+	height: 70px;
+	width: 100%;
+}
+.sticky-nav.animated{
+	top:0;
+	opacity: 1;
+}
+.sticky-nav.animated.reverse{
+	transition : opacity 0.1s ease-in-out;
+	-webkit-transition : opacity 0.1s ease-in-out;
+	-moz-transition : opacity 0.1s ease-in-out;
+	-o-transition : opacity 0.1s ease-in-out;
+	-ms-transition : opacity 0.1s ease-in-out;
+	opacity: 0;
+}
+.sticky-nav .top-bar,
+.sticky-nav .top-bar .name{
+	height: 60px;
+}
+.sticky-nav .top-bar .name h1,
+.sticky-nav .top-bar-section > ul > li:not(.has-form) > a:not(.button),
+.sticky-nav .top-bar-section > ul > li.active:not(.has-form) > a:not(.button){
+	line-height: 60px;
+}
+
+
