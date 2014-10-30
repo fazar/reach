@@ -42,10 +42,16 @@
   }
 
   reach.backgroundFullScreen = function() {
-    console.log($('.main-with-image').length);
-    if($('.main-with-image').length > 0) {
-      console.log($(window).height());
-      $('.main-with-image').height($(window).height());
+    if($('.main-with-image').length > 0) {      
+      var windowHeight =  $(window).height();
+      if($('.main-with-image').hasClass('full-screen')) {
+        windowHeight = $('.main-with-image').height(windowHeight);
+      }else if($('.main-with-image').hasClass('half-screen')){
+        windowHeight = $('.main-with-image').height(windowHeight / 2);
+      } else {
+        $('.single-post-header').removeClass('main-with-image');
+      }
+      
     }
   }
 

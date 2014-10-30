@@ -2177,7 +2177,30 @@ a.quote.whole-link:hover img{
 	max-width: 500px;
 	display: inline-block;
 	padding:20px 0;
+}
 
+.single-post-header.full-screen {
+	height: 100%;
+}
+.single-post-header.half-screen {
+	height: 50%;
+}
+.single-post-header.no-image {
+	height: 0%;
+}
+
+.subtitle {
+	font-family: 'Roboto Slab';
+	font-weight: 300;
+	font-size: 1.125rem;
+	line-height: 1;
+	margin: 0;
+	padding: 20px 0 0 0;
+}
+
+.post-title {
+	margin: 0;
+	padding: 0;
 }
 
 

@@ -25,6 +25,7 @@
 							}
 						?>
 					</div> -->
+					
 					<div class="post-content">
 						<ul class="post-meta">				
 							<li><?php the_category(); ?></li>							

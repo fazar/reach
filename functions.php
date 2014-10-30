@@ -48,6 +48,7 @@
     			),
     			'include-modules' => array(
 					'page_options',
+					'post_options',
 					'post_format',
 					'shortcodes',
 					'tinymce_dialog',
