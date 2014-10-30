@@ -7,6 +7,8 @@
 			$this->instantiate('row');
 			$this->instantiate('team_member');
 			$this->instantiate('our_fields');
+			$this->instantiate('accordion');
+			$this->instantiate('tabs');
 		}
 	}
 ?>
