@@ -2203,4 +2203,44 @@ a.quote.whole-link:hover img{
 	padding: 0;
 }
 
+.single-blogpost .post-title {
+	font-family: 'Roboto';
+	font-weight: 700;
+}
+
+.single-blogpost h1 {
+	font-size: 3.75rem;
+}
+.single-blogpost h2 {
+	font-size: 3rem;	
+}
+.single-blogpost h3 {
+	font-size: 2.25rem;	
+}
+.single-blogpost h4 {
+	font-size: 1.875rem;	
+}
+.single-blogpost h5 {
+	font-size: 1.625rem;	
+}
+.single-blogpost h6 {
+	font-size: 1.5rem;	
+}
+.single-blogpost h1,
+.single-blogpost h2,
+.single-blogpost h3,
+.single-blogpost h4,
+.single-blogpost h5,
+.single-blogpost h6 {
+	/*line-height: 1;*/
+	letter-spacing: 3.8px;
+}  
+
+.single-blogpost blockquote > p {
+	font-family: 'Open Sans';
+	font-weight: 300;
+	font-style: italic;
+	font-size: 2rem;
+}
+
 

@@ -25,7 +25,7 @@
 							}
 						?>
 					</div> -->
-					
+
 					<div class="post-content">
 						<ul class="post-meta">				
 							<li><?php the_category(); ?></li>							
@@ -35,10 +35,7 @@
 						
 						<div class="the-content">
 						<?php the_content() ?>
-						</div>
-						<div class="post-footer">
-						<?php do_action( 'dc_social_share' ) ?>
-						</div>
+						</div>						
 					</div>
 					<?php 					
 					if ( comments_open() || get_comments_number() ) {
