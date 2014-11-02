@@ -13,6 +13,12 @@
 			else if(is_author()){
 				$this->author_header();
 			}
+			else if(is_search()){
+				$this->search_header();
+			}
+			else if(is_archive()){
+				$this->archive_header();
+			}
 			else {
 				$this->main_header();
 			}			
@@ -93,6 +99,33 @@
 						?>
 						<h1> <?php echo $curauth->display_name ?> </h1>
 						<p> <?php echo $curauth->description ?> </p>
+					</div>
+				</div>
+			</header>
+			<?php
+		}
+
+		private function search_header(){
+			?>
+			<header class="main">
+				<?php $this->secondary_nav();  ?>
+				<div class="row">
+					<div class="brand columns large-12">
+						<h1>&#8226; <?php _e('Result For', THEMENAME) ?> &#8226;</h1>
+						<h4> <?php  the_search_query() ?> </h4>
+					</div>
+				</div>
+			</header>
+			<?php
+		}
+
+		private function archive_header(){
+			?>
+				<header class="main">
+				<?php $this->secondary_nav();  ?>
+				<div class="row">
+					<div class="brand columns large-12">
+						<h1>&#8226; <?php echo wp_title("",false); ?> &#8226;</h1>
 					</div>
 				</div>
 			</header>
