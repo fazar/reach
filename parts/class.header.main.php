@@ -61,13 +61,23 @@
 			global $post;			
 			$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large');				
 			$main_class = (!$image) ? '': 'main-with-image';
+			$post_header = get_post_meta($post->ID, '_dc_post_header', true);
+			//$post_header = .!empty($post_header['header_position']) ? $post_header['header_position'] : '';
+			$background_position = "background-position:".$post_header['header_position'];			
+			$header_type = (!$image) ? '': $post_header['header_type'];
 			?>
-			<header class="main single-post-header <?php echo $main_class; ?>" style="background-image:url(<?php echo $image[0] ?>)">
+			<header class="main single-post-header <?php echo $main_class; ?> <?php echo $header_type; ?>" 
+				style="background-image:url(<?php echo $image[0] ?>);<?php echo $background_position; ?>">
 				<?php $this->secondary_nav() ?>
 				<div class="row">
 					<div class="large-12 columns">
 						<h2 class="post-title"><?php the_title() ?></h2>
-						<p>Music is for All</p>						
+						<?php							
+							if ( !empty($post_header['subtitle']) ){
+								$subtitle = $post_header['subtitle'];
+								echo "<p class='subtitle'>$subtitle</p>";
+							}
+						?>						
 					</div>
 				</div>
 			</header>
