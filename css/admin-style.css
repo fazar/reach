@@ -91,3 +91,6 @@ i.selected{
     padding-right: 7px;
     line-height: 72px;
 }
+.space-divider {
+	border: 1px dotted #000000;
+}

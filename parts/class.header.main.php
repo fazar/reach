@@ -57,8 +57,12 @@
 			$main_class = (!$image) ? '': 'main-with-image';
 			$post_header = get_post_meta($post->ID, '_dc_post_header', true);
 			//$post_header = .!empty($post_header['header_position']) ? $post_header['header_position'] : '';
-			$background_position = "background-position:".$post_header['header_position'];			
-			$header_type = (!$image) ? '': $post_header['header_type'];
+			$background_position = !empty($post_header['header_position']) ? "background-position:".$post_header['header_position'] : '';
+			$header_type = '';
+			if(!empty($post_header['header_type'])) {
+				$header_type = (!$image) ? '': $post_header['header_type'];	
+			}
+			
 			?>
 			<header class="main single-post-header <?php echo $main_class; ?> <?php echo $header_type; ?>" 
 				style="background-image:url(<?php echo $image[0] ?>);<?php echo $background_position; ?>">
