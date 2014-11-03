@@ -151,10 +151,13 @@ a:hover {
 	color: #212121;
 }
 
-.post-meta {
+.posts-list .post-meta {
+	padding-bottom: 20px;
+}
+/*.post-meta {
 	padding-top: 80px;
 	padding-bottom: 40px;
-}
+}*/
 
 .post-title {
 	font-family: 'Open Sans';
@@ -2304,7 +2307,7 @@ a.quote.whole-link:hover img{
 	font-size: 1.125rem;
 	line-height: 1;
 	margin: 0;
-	padding: 20px 0 0 0;
+	/*padding: 20px 0 0 0;*/
 }
 
 .post-title {
@@ -2351,5 +2354,27 @@ a.quote.whole-link:hover img{
 	font-style: italic;
 	font-size: 2rem;
 }
+
+.single-blogpost .post-meta > li,
+.single-blogpost .post-categories li a
+ {
+ 	font-family: 'Open Sans';
+ 	font-size: 1rem;
+ 	font-weight: 400;
+ }
+
+ .single-post .post-title {
+ 	font-family: 'Roboto';
+ 	font-weight: 700;
+ 	font-size: 2.25rem;
+ 	padding-bottom: 20px;
+ 	line-height: 1;
+ }
+
+ /*.single-post .subtitle {
+ 	font-family: 'Roboto Slab';
+ 	font-weight: 200;
+ 	font-size: 1.125rem;
+ }*/
 
 
