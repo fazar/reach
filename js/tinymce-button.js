@@ -276,6 +276,33 @@
             });
         }
 
+        dcEditor.divider = function() {
+            $('.horizontal-divider').hide();
+            $('.submit-divider').click(function() {
+                var table = $(this).closest('table');
+                var divider_type = table.find('.divider-type').val();
+                var divider_height = table.find('.divider-height').val() + 'px';
+                var divider_width = table.find('.divider-width').val()+ 'px';
+                var divider_color = table.find('.color-field').val() == undefined ? 'transparent' : table.find('.color-field').val();
+                var return_text = '';
+                if (divider_type == 'horizontal') {
+                    return_text = '<div class="space-divider" style="height:'+divider_height+';width:'+divider_width+';background-color:'+divider_color+';"></div>';
+                } else {
+                    return_text = '<div class="space-divider" style="height:'+divider_height+';background-color:transparent"></div>';
+                }
+                tinyMCE.activeEditor.execCommand('mceInsertContent', 0, return_text);
+            });
+
+            $('.divider-type').change(function(){
+                if($(this).val() == 'horizontal') {
+                    $('.horizontal-divider').show();
+                }else{
+                    $('.horizontal-divider').hide();
+                }
+
+            })
+        }
+
         $(document).ready(function(){
             dcEditor.initiate();
             $('.color-field').wpColorPicker();
@@ -285,6 +312,7 @@
             dcEditor.accordion();
             dcEditor.tabs();
             dcEditor.highlight();
+            dcEditor.divider();
             dcEditor.finalize();
         });
 

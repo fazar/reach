@@ -46,13 +46,33 @@
 			<?php
 		}
 
-		private function main_header() { ?>
+		private function main_header() { 
+			if (is_page()){
+				global $post;
+				$page_header = get_post_meta($post->ID, '_dc_page_header', true);
+				if( !empty($page_header['title']) ){
+					$title  = $page_header['title'];
+				}
+				if(!empty($page_header['subtitle'])){
+					$subtitle = $page_header['subtitle'];
+				}else{
+					$subtitle = '';
+				}
+			}
+			?>
 			<header class="main">
 				<?php $this->secondary_nav();  ?>
 				<div class="row">
 					<div class="brand columns large-12">
-						<h1> <?php do_action( 'dc_logo' ) ?> </h1>
-						<h4> <?php echo get_bloginfo( 'description' ) ?> </h4>
+						<h1> 
+							<?php 
+							if(isset($title))
+								echo $title;
+							else
+							  do_action( 'dc_logo' ) 
+							?> 
+						</h1>
+						<h4> <?php echo isset($subtitle) ? $subtitle : get_bloginfo( 'description' ) ?> </h4>
 					</div>
 				</div>
 			</header>
@@ -73,8 +93,12 @@
 			$main_class = (!$image) ? '': 'main-with-image';
 			$post_header = get_post_meta($post->ID, '_dc_post_header', true);
 			//$post_header = .!empty($post_header['header_position']) ? $post_header['header_position'] : '';
-			$background_position = "background-position:".$post_header['header_position'];			
-			$header_type = (!$image) ? '': $post_header['header_type'];
+			$background_position = !empty($post_header['header_position']) ? "background-position:".$post_header['header_position'] : '';
+			$header_type = '';
+			if(!empty($post_header['header_type'])) {
+				$header_type = (!$image) ? '': $post_header['header_type'];	
+			}
+			
 			?>
 			<header class="main single-post-header <?php echo $main_class; ?> <?php echo $header_type; ?>" 
 				style="background-image:url(<?php echo $image[0] ?>);<?php echo $background_position; ?>">

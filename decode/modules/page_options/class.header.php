@@ -33,7 +33,7 @@
 						),
 						array(
 							'id' => 'contoh_warna',
-							'title' => 'Contoh Warna',
+							'title' => 'Color Example',
 							'type' => 'color'
 						),
 						array(

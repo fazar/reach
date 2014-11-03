@@ -8,6 +8,7 @@
 			$this->instantiate( 'accordion' );
 			$this->instantiate( 'tabs' );
 			$this->instantiate( 'highlight');
+			$this->instantiate( 'divider');
 		}
 		static function load($class){
 			$file_path = dirname(__FILE__);
