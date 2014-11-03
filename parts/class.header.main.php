@@ -6,8 +6,10 @@
 			add_action( 'rh_main_header', array( $this, 'display_main_header' ) );
 		}
 
-		function display_main_header(){			
-			if(is_single()) {
+		function display_main_header(){
+			if (is_404()){
+				$this->not_found_header();
+			}else if(is_single()) {
 				$this->single_header();
 			} 
 			else if(is_author()){
@@ -55,6 +57,14 @@
 				</div>
 			</header>
 		<?php
+		}
+
+		private function not_found_header(){
+			?>
+			<header class="main">
+				<?php $this->secondary_nav();  ?>
+			</header>
+			<?php
 		}
 
 		private function single_header() { 		
