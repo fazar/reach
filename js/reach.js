@@ -80,6 +80,14 @@
     }
   }
 
+  reach.fixDivider = function() {
+    $('p:has(> span.space-divider)')
+    //.css('background-color', 'red')
+      .css('padding', '0')
+      .css('margin', '0')
+      .css('line-height', '1');
+  }
+
   reach.googleMap = function(){
     var $mapHolder = $('#map-holder');
     if ( $mapHolder.length ==  0) return;
@@ -251,5 +259,6 @@
     reach.googleMap();
     reach.backgroundFullScreen();
     reach.stickyMenu();
+    reach.fixDivider();
   });
 }( jQuery, window ));
