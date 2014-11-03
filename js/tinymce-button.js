@@ -286,11 +286,16 @@
                 var divider_color = table.find('.color-field').val() == undefined ? 'transparent' : table.find('.color-field').val();
                 var return_text = '';
                 if (divider_type == 'horizontal') {
-                    return_text = '<div class="space-divider" style="height:'+divider_height+';width:'+divider_width+';background-color:'+divider_color+';"></div>';
+                    return_text = '<span class="space-divider" style="display:inline-block;height:'+divider_height+';width:'+divider_width+';background-color:'+divider_color+';">&nbsp;</span>';
                 } else {
-                    return_text = '<div class="space-divider" style="height:'+divider_height+';background-color:transparent"></div>';
+                    return_text = '<span class="space-divider" style="display:inline-block;height:'+divider_height+';width:100%;background-color:transparent">&nbsp;</span>';
                 }
-                tinyMCE.activeEditor.execCommand('mceInsertContent', 0, return_text);
+                tinyMCE.activeEditor.execCommand('mceInsertContent', 0, return_text);                
+
+                table.find('.divider-type').val('space');
+                table.find('.divider-height').val('');
+                table.find('.divider-width').val('');                
+                $('.horizontal-divider').hide();
             });
 
             $('.divider-type').change(function(){
@@ -299,7 +304,6 @@
                 }else{
                     $('.horizontal-divider').hide();
                 }
-
             })
         }
 
