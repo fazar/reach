@@ -12,6 +12,8 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,600,500,700);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,600,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,600,700);
+
 @font-face {
     font-family: 'icomoon';
     src:url('fonts/icomoon/icomoon.eot?m1z1pb');
@@ -2352,6 +2354,18 @@ a.quote.whole-link:hover img{
 	font-style: italic;
 	font-size: 2rem;
 }
+
+.single-blogpost .the-content > p,
+.comment-section p {
+	font-size:1.375rem;
+	font-family: Roboto Slab;
+}
+
+.comment-section p {
+	font-weight: 200;
+	color: #757575;
+}
+
 .not-found-page{
 	padding:80px 20px;
 }
@@ -2448,4 +2462,15 @@ margin-top: 20px;
 }
 article img{
 	max-width: 100%;
+}
+.post-content {
+	padding-top: 80px;
+}
+
+blockquote {
+	margin-left: -200px;
+	/* outline: 1px solid red; */
+	margin-right: -200px;
+	padding: 0;
+	border: none;
 }
