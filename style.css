@@ -1713,9 +1713,11 @@ span.says {
     color:#212121;
 }
 .comment-list .reply a {
-    color:#bdbdbd;
-    font-size: 0.75rem;
-    line-height: 1;
+    color: #bdbdbd;
+	font-size: 0.875rem;
+	line-height: 1;
+	margin-top: 16px;
+	display: block;
 }
 .comment-awaiting-moderation{font-size: 0.75rem;}
 .vcard{
@@ -2343,10 +2345,18 @@ a.quote.whole-link:hover img{
 .single-blogpost h3,
 .single-blogpost h4,
 .single-blogpost h5,
-.single-blogpost h6 {
-	/*line-height: 1;*/
+.single-blogpost h6 {	
 	letter-spacing: 3.8px;
 }  
+
+.single-blogpost h1 {
+	line-height: 1.2;
+	margin-bottom: 20px;
+}
+
+.single-blogpost h4 {
+	letter-spacing: 3px;
+}
 
 .single-blogpost blockquote > p {
 	font-family: 'Open Sans';
@@ -2359,6 +2369,10 @@ a.quote.whole-link:hover img{
 .comment-section p {
 	font-size:1.375rem;
 	font-family: Roboto Slab;
+}
+
+.single-blogpost .post-meta {
+	margin-bottom: 20px;
 }
 
 .comment-section p {
@@ -2436,20 +2450,31 @@ margin-top: 20px;
 .wp-caption{
 	position: relative;
 	max-width: 100%;
+	margin-bottom: 30px;
 }
-.wp-caption.alignleft .wp-caption-text{
-	position: absolute;
-	top:0;
-	width: 190px;
-	left:-210px;
+.wp-caption.alignnone {
+
+}
+.wp-caption .wp-caption-text{
 	font-size: 0.875rem;
 	font-family: Open Sans;
 	font-weight: 300;
 	color:#bdbdbd;
 	font-style: italic;
+}
+.wp-caption.alignleft .wp-caption-text{
+	position: absolute;
+	top:0;
+	width: 190px;
+	left:-210px;	
 	text-align: right;
 	padding-top: 10px;
 }
+.wp-caption.aligncenter .wp-caption-text {
+	text-align: center;
+	padding-top: 15px;	
+}
+
 .wp-caption.alignleft .wp-caption-text:before{
 	width: 60px;
 	height: 1px;
@@ -2473,4 +2498,14 @@ blockquote {
 	margin-right: -200px;
 	padding: 0;
 	border: none;
+}
+
+.single-blogpost .post-content,
+.single-blogpost .comment-section {
+	padding-right: 14px;
+	padding-left: 14px;
+}
+
+.single-blogpost .post-content {
+	margin-bottom: 40px;
 }

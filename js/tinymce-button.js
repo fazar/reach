@@ -286,9 +286,9 @@
                 var divider_color = table.find('.color-field').val() == undefined ? 'transparent' : table.find('.color-field').val();
                 var return_text = '';
                 if (divider_type == 'horizontal') {
-                    return_text = '<span class="space-divider" style="display:inline-block;height:'+divider_height+';width:'+divider_width+';background-color:'+divider_color+';">&nbsp;</span>';
+                    return_text = '<span class="space-divider" style="display:inline-block;margin-top: 35px;margin-bottom: 35px;height:'+divider_height+';width:'+divider_width+';background-color:'+divider_color+';">&nbsp;</span>';
                 } else {
-                    return_text = '<span class="space-divider" style="display:inline-block;height:'+divider_height+';width:100%;background-color:transparent">&nbsp;</span>';
+                    return_text = '<span class="space-divider" style="display:inline-block;margin-top: 35px;margin-bottom: 35px;height:'+divider_height+';width:100%;background-color:transparent">&nbsp;</span>';
                 }
                 tinyMCE.activeEditor.execCommand('mceInsertContent', 0, return_text);                
 

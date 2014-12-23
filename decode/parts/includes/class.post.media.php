@@ -87,7 +87,15 @@
 
 		function display_image(){
 			if ( has_post_thumbnail() ) {
-				the_post_thumbnail($this->size);
+				/*the_post_thumbnail($this->size);*/
+				global $post;
+				$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), $this->size);
+
+				if($image[1] / $image[2] > 1.35) {
+					echo "<div style='background-image:url(".$image[0].");height:400px;background-size:cover'></div>";
+				} else {
+					the_post_thumbnail($this->size);
+				}
 			} 
 		}
 
